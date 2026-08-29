@@ -1,0 +1,2705 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aryan Kumar Shaw — Systems Engineer & Full Stack Architect</title>
+  <meta name="description" content="Official Portfolio of Aryan Kumar Shaw — Full Stack Engineer, Systems Builder & CSBS Undergrad at NiT Kolkata." />
+  <meta name="keywords" content="Aryan Kumar Shaw, Full Stack Developer, Systems Engineer, NiT Kolkata, CSBS, Software Engineer, Portfolio" />
+  <meta name="author" content="Aryan Kumar Shaw" />
+  
+  <!-- OpenGraph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Aryan Kumar Shaw — Systems Engineer & Full Stack Architect" />
+  <meta property="og:description" content="Official Portfolio of Aryan Kumar Shaw — Full Stack Engineer, Systems Builder & CSBS Undergrad at NiT Kolkata." />
+  <meta property="og:image" content="./aryan_pose_1.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  
+  <!-- High-Res Vector Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23000000'/><path d='M16 5L25 24H20.5L16 14.5L11.5 24H7L16 5Z' fill='%23FFFFFF'/><path d='M11 26.5L16 21.5L21 26.5H11Z' fill='%23FFFFFF'/><circle cx='16' cy='18' r='1.5' fill='%23000000'/></svg>">
+
+  <!-- Schema.org JSON-LD Structured Data for Google Knowledge Graph & Rich Results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aryan Kumar Shaw",
+    "jobTitle": "Full Stack Engineer & Systems Architect",
+    "url": "https://aryanshaw.dev",
+    "image": "https://aryanshaw.dev/aryan_pose_1.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kolkata",
+      "addressRegion": "West Bengal",
+      "addressCountry": "India"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Narula Institute of Technology (NiT), Kolkata"
+    },
+    "sameAs": [
+      "https://github.com/aryanshaw421-alt",
+      "https://www.linkedin.com/in/aryan-kumar-shaw-70334b254/",
+      "https://www.instagram.com/aryan_m340i/",
+      "https://wa.me/916291366380"
+    ],
+    "knowsAbout": [
+      "Full Stack Development",
+      "Systems Programming",
+      "C",
+      "Java",
+      "JavaScript",
+      "Kotlin",
+      "Tailwind CSS",
+      "Data Structures and Algorithms",
+      "Blockchain & Cryptography",
+      "DBMS & SQL"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            lux: {
+              black: '#000000',
+              bg: '#030303',
+              card: '#0a0a0a',
+              cardHover: '#0f0f0f',
+              border: '#1c1c1c',
+              borderHover: '#383838',
+              borderActive: '#ffffff',
+              muted: '#737373',
+              silver: '#a3a3a3',
+              light: '#f5f5f5',
+              white: '#ffffff',
+            }
+          },
+          fontFamily: {
+            syne: ['"Syne"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons, Three.js & GSAP -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <style>
+    /* Ultra-Premium Luxury Matte Obsidian System */
+    :root {
+      --bg: #030303;
+      --card-bg: #0a0a0a;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(255, 255, 255, 0.35);
+      --text-white: #ffffff;
+      --text-muted: #737373;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-white);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      cursor: default;
+    }
+
+    /* Colossal Headline Styling */
+    .font-syne {
+      font-family: 'Syne', sans-serif;
+      letter-spacing: -0.05em;
+    }
+
+    /* Subtle Film Grain Noise for Physical Luxury Texture */
+    .grain-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Custom Fluid Cursor */
+    .custom-cursor-dot {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      background: #ffffff;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.08s ease-out, opacity 0.2s ease;
+      mix-blend-mode: difference;
+    }
+    .custom-cursor-ring {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%, -50%);
+      transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease;
+      will-change: transform;
+    }
+
+    /* Accessibility Focus Rings */
+    :focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: 3px;
+    }
+
+    /* Custom Ultra-Thin Scrollbar */
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #000000;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #262626;
+      border-radius: 2px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ffffff;
+    }
+
+    /* 3D Fixed Background Canvas */
+    .fixed-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.5;
+    }
+
+    /* High-End Architectural Grid Lines */
+    .luxury-grid {
+      background-size: 80px 80px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    }
+
+    /* Ultra-Premium Glassmorphism Card with Sheen */
+    .lux-card {
+      position: relative;
+      background: rgba(10, 10, 10, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 25px 50px -20px rgba(0, 0, 0, 0.95);
+      transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+      will-change: transform;
+    }
+    .lux-card:hover {
+      border-color: rgba(255, 255, 255, 0.4);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 30px 60px -20px rgba(0, 0, 0, 1), 0 0 35px rgba(255, 255, 255, 0.04);
+      transform: translateY(-3px);
+    }
+    .lux-card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.14), transparent 45%);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+    .lux-card:hover::before {
+      opacity: 1;
+    }
+
+    /* ANIMATE UI & MAGE UI BUTTON ANIMATION ENGINE */
+    
+    /* 1. Shiny Button Specular Light Sweep */
+    .shiny-btn {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .shiny-btn::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 20%;
+      height: 200%;
+      background: linear-gradient(
+        60deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.55) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(25deg);
+      pointer-events: none;
+      animation: shiny-sweep 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    @keyframes shiny-sweep {
+      0%, 70% {
+        left: -60%;
+      }
+      100% {
+        left: 140%;
+      }
+    }
+
+    /* 2. Moving Border Beam Gradient (Animate UI) */
+    .border-beam-btn {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .border-beam-btn::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 160%;
+      height: 400%;
+      background: conic-gradient(
+        from 0deg,
+        transparent 0deg 300deg,
+        rgba(255, 255, 255, 0.8) 330deg,
+        transparent 360deg
+      );
+      transform: translate(-50%, -50%);
+      animation: rotate-beam 3.5s linear infinite;
+      z-index: -2;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+    .border-beam-btn::after {
+      content: '';
+      position: absolute;
+      inset: 1px;
+      background: #000000;
+      border-radius: inherit;
+      z-index: -1;
+    }
+    @keyframes rotate-beam {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* 3. Interactive Expanding Hover Pill Button */
+    .interactive-hover-pill {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .interactive-hover-pill .expand-circle {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #ffffff;
+      transform: translateY(-50%);
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .interactive-hover-pill:hover .expand-circle {
+      transform: translateY(-50%) scale(55);
+    }
+    .interactive-hover-pill:hover span, 
+    .interactive-hover-pill:hover i {
+      color: #000000 !important;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* 4. Fluid Click Water Ripple Effect */
+    .ripple-wave {
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      animation: ripple-grow 0.6s linear;
+      background-color: rgba(255, 255, 255, 0.35);
+      pointer-events: none;
+      z-index: 10;
+    }
+    @keyframes ripple-grow {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+
+    /* Magnetic Elements */
+    .magnetic-element {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      will-change: transform;
+    }
+
+    /* Terminal Custom Scroll */
+    .terminal-scroll::-webkit-scrollbar {
+      width: 4px;
+    }
+    .terminal-scroll::-webkit-scrollbar-track {
+      background: #000000;
+    }
+    .terminal-scroll::-webkit-scrollbar-thumb {
+      background: #333333;
+      border-radius: 2px;
+    }
+
+    /* Selection */
+    ::selection {
+      background: #ffffff;
+      color: #000000;
+    }
+
+    /* Print View */
+    @media print {
+      body { background: #fff !important; color: #000 !important; }
+      .fixed-canvas, .grain-overlay, header, footer, #hero, #simulator, #skills, #projects, #education, #contact, #toast, .custom-cursor-dot, .custom-cursor-ring { display: none !important; }
+      #cv-modal { position: static !important; display: block !important; background: none !important; }
+      #printable-cv { color: #000 !important; }
+      #printable-cv * { color: #000 !important; }
+    }
+  </style>
+</head>
+<body class="bg-[#030303] text-white luxury-grid relative min-h-screen">
+
+  <!-- Physical Film Grain Overlay -->
+  <div class="grain-overlay"></div>
+
+  <!-- Custom Magnetic Cursor Elements -->
+  <div id="cursor-dot" class="custom-cursor-dot hidden md:block"></div>
+  <div id="cursor-ring" class="custom-cursor-ring hidden md:block"></div>
+
+  <!-- 3D Monochrome Gyroscope & Particle Engine -->
+  <canvas id="fixed-canvas" class="fixed-canvas"></canvas>
+
+  <!-- ULTRA-SLEEK FLOATING EXECUTIVE NAVBAR -->
+  <header class="fixed top-4 left-0 w-full z-50 px-4 sm:px-6 pointer-events-none">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-2 sm:p-2.5 rounded-2xl bg-[#080808]/80 backdrop-blur-2xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.9)] pointer-events-auto transition-all duration-300">
+      
+      <!-- Brand Identity -->
+      <a href="#hero" class="flex items-center gap-3 group pl-1">
+        <div class="w-10 h-10 rounded-xl bg-white text-black font-syne font-black flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.3)] border border-white/40 group-hover:scale-105 transition-transform relative overflow-hidden shiny-btn">
+          <!-- Custom Geometric AKS Vector Brand Logo Mark -->
+          <svg class="w-6 h-6 text-black" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 4L26 24H21L16 13.5L11 24H6L16 4Z" fill="#000000"/>
+            <path d="M10.5 27L16 21.5L21.5 27H10.5Z" fill="#000000"/>
+            <circle cx="16" cy="17" r="1.8" fill="#FFFFFF"/>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-white tracking-tight text-sm flex items-center gap-1.5 font-syne">
+            ARYAN KUMAR SHAW
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse hidden sm:inline-block"></span>
+          </span>
+          <span class="text-[9px] text-lux-muted font-mono tracking-wider uppercase font-semibold">FULL STACK & FREELANCE ENGINEER</span>
+        </div>
+      </a>
+
+      <!-- Refined Executive Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 font-sans text-xs font-medium text-lux-silver">
+        <a href="#about" class="px-3.5 py-1.5 rounded-xl hover:text-white hover:bg-white/5 transition-all">About</a>
+        <a href="#skills" class="px-3.5 py-1.5 rounded-xl hover:text-white hover:bg-white/5 transition-all">Skills</a>
+        <a href="#projects" class="px-3.5 py-1.5 rounded-xl hover:text-white hover:bg-white/5 transition-all">Projects</a>
+        <a href="#simulator" class="px-3.5 py-1.5 rounded-xl text-white font-semibold hover:bg-white/10 transition-all flex items-center gap-1.5">
+          <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
+          <span>VCS Lab</span>
+        </a>
+        <a href="#education" class="px-3.5 py-1.5 rounded-xl hover:text-white hover:bg-white/5 transition-all">Education</a>
+        <a href="#contact" class="px-3.5 py-1.5 rounded-xl hover:text-white hover:bg-white/5 transition-all">Contact</a>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="flex items-center gap-2">
+        <!-- Cmd + K Command Palette Trigger -->
+        <button id="cmd-k-btn" class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-lux-silver hover:text-white hover:bg-white/10 transition-all flex items-center gap-2 text-xs font-mono" title="Open Command Palette (Cmd + K)">
+          <svg class="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <span class="hidden sm:inline text-[11px] text-lux-muted">Search</span>
+          <kbd class="px-1.5 py-0.5 rounded bg-black/60 border border-white/20 text-[10px] text-white">⌘K</kbd>
+        </button>
+
+        <!-- Audio Synthesizer Toggle -->
+        <button id="sound-btn" class="p-2 sm:px-3 sm:py-2 rounded-xl bg-white/5 border border-white/10 text-lux-silver hover:text-white hover:bg-white/10 transition-all flex items-center gap-1.5 text-xs font-mono" title="Toggle Sound FX">
+          <svg class="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+          <span class="hidden lg:inline text-[11px] font-semibold">FX</span>
+        </button>
+
+        <!-- Social Quick Links -->
+        <a href="https://github.com/aryanshaw421-alt" target="_blank" rel="noopener noreferrer" class="p-2 sm:p-2.5 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/15 hover:border-white/30 transition-all group" aria-label="GitHub" title="GitHub: aryanshaw421-alt">
+          <svg class="w-4 h-4 fill-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/aryan-kumar-shaw-70334b254/" target="_blank" rel="noopener noreferrer" class="p-2 sm:p-2.5 rounded-xl bg-[#0A66C2]/15 border border-[#0A66C2]/40 text-[#0A66C2] hover:bg-[#0A66C2]/30 hover:border-[#0A66C2] transition-all group" aria-label="LinkedIn" title="LinkedIn: aryan-kumar-shaw">
+          <svg class="w-4 h-4 fill-[#0A66C2] group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/aryan_m340i/" target="_blank" rel="noopener noreferrer" class="p-2 sm:p-2.5 rounded-xl bg-[#E4405F]/15 border border-[#E4405F]/40 text-[#E4405F] hover:bg-[#E4405F]/30 hover:border-[#E4405F] transition-all group" aria-label="Instagram" title="Instagram: @aryan_m340i">
+          <svg class="w-4 h-4 fill-[#E4405F] group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://wa.me/916291366380" target="_blank" rel="noopener noreferrer" class="p-2 sm:p-2.5 rounded-xl bg-[#25D366]/15 border border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366]/30 hover:border-[#25D366] transition-all group" aria-label="WhatsApp" title="WhatsApp: +91 6291366380">
+          <svg class="w-4 h-4 fill-[#25D366] group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        </a>
+
+        <!-- Primary View Resume Button -->
+        <button id="open-cv-btn" class="ml-1 px-4 py-2 rounded-xl bg-white text-black font-sans font-bold text-xs hover:bg-slate-200 transition-all shadow-md flex items-center gap-1.5 shiny-btn border-beam-btn">
+          <svg class="w-3.5 h-3.5 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+          <span>Resume</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN VIEWPORT -->
+  <main class="relative z-10 pt-36 pb-28 max-w-7xl mx-auto px-6 space-y-36">
+
+    <!-- 01. MASSIVE HERO / ARYAN KUMAR SHAW + PORTRAIT SIDE-BY-SIDE -->
+    <section id="hero" class="space-y-12 pt-4">
+      
+      <!-- Top Status Pill -->
+      <div class="flex flex-wrap items-center justify-between gap-4 font-mono text-xs">
+        <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-lux-card border border-white/20 text-xs text-white">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+          <span>CANDIDATE: ARYAN KUMAR SHAW • B.TECH IN CSBS (2025–2029)</span>
+        </div>
+        <div class="text-lux-muted hidden sm:block uppercase tracking-[0.25em] text-[11px] font-bold">
+          KOLKATA, INDIA • SYSTEMS BUILDER
+        </div>
+      </div>
+
+      <!-- HERO SPLIT: GIANT NAME ON LEFT, PROFESSIONAL PORTRAIT RIGHT BESIDE IT -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- Left Column: Giant Name & Pitch -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="font-mono text-xs sm:text-sm text-lux-silver uppercase tracking-[0.3em] font-semibold">
+            // ENGINEER & ARCHITECT PORTFOLIO
+          </div>
+          
+          <h1 class="text-5xl sm:text-7xl md:text-8xl lg:text-[92px] xl:text-[105px] font-syne font-black text-white leading-[0.92] tracking-tighter uppercase">
+            ARYAN<br />
+            KUMAR SHAW.
+          </h1>
+
+          <p class="text-lg sm:text-2xl font-display font-medium text-lux-silver leading-snug max-w-2xl">
+            Full Stack Engineer & Systems Architect building developer tools, version control internals, and high-performance software from first principles.
+          </p>
+
+          <!-- Action Matrix -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a href="#projects" class="magnetic-element shiny-btn px-7 py-4 rounded-2xl bg-white text-black font-mono text-xs font-black uppercase tracking-wider hover:bg-slate-200 transition-all flex items-center gap-2.5 min-h-[50px] shadow-2xl">
+              <span>Explore Projects</span>
+              <svg class="w-4 h-4 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+
+            <a href="#simulator" class="magnetic-element border-beam-btn px-6 py-4 rounded-2xl bg-lux-card text-white font-mono text-xs font-bold uppercase tracking-wider hover:bg-white/10 transition-all flex items-center gap-2.5 min-h-[50px]">
+              <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+              <span>Launch VCS Lab</span>
+            </a>
+
+            <div class="flex items-center gap-2">
+              <a href="https://github.com/aryanshaw421-alt" target="_blank" rel="noopener noreferrer" class="magnetic-element p-3.5 rounded-2xl bg-lux-card border border-white/20 text-white hover:border-white hover:bg-white/15 transition-all min-h-[50px] min-w-[50px] flex items-center justify-center group" aria-label="GitHub" title="GitHub: aryanshaw421-alt">
+                <svg class="w-5 h-5 fill-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/aryan-kumar-shaw-70334b254/" target="_blank" rel="noopener noreferrer" class="magnetic-element p-3.5 rounded-2xl bg-[#0A66C2]/15 border border-[#0A66C2]/40 text-[#0A66C2] hover:bg-[#0A66C2]/30 hover:border-[#0A66C2] transition-all min-h-[50px] min-w-[50px] flex items-center justify-center group" aria-label="LinkedIn" title="LinkedIn: aryan-kumar-shaw">
+                <svg class="w-5 h-5 fill-[#0A66C2] group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/aryan_m340i/" target="_blank" rel="noopener noreferrer" class="magnetic-element p-3.5 rounded-2xl bg-[#E4405F]/15 border border-[#E4405F]/40 text-[#E4405F] hover:bg-[#E4405F]/30 hover:border-[#E4405F] transition-all min-h-[50px] min-w-[50px] flex items-center justify-center group" aria-label="Instagram" title="Instagram: @aryan_m340i">
+                <svg class="w-5 h-5 fill-[#E4405F] group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://wa.me/916291366380" target="_blank" rel="noopener noreferrer" class="magnetic-element p-3.5 rounded-2xl bg-[#25D366]/15 border border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366]/30 hover:border-[#25D366] transition-all min-h-[50px] min-w-[50px] flex items-center justify-center group" aria-label="WhatsApp" title="WhatsApp: +91 6291366380">
+                <svg class="w-5 h-5 fill-[#25D366] group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              </a>
+              <button id="quick-copy-email" class="magnetic-element p-3.5 rounded-2xl bg-[#EA4335]/15 border border-[#EA4335]/40 text-[#EA4335] hover:bg-[#EA4335]/30 hover:border-[#EA4335] transition-all min-h-[50px] min-w-[50px] flex items-center justify-center group" aria-label="Copy Email" title="Copy aryanshaw421@gmail.com">
+                <svg class="w-5 h-5 text-[#EA4335] group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Multi-Pose Auto-Rotating Dynamic Portrait Carousel -->
+        <div class="lg:col-span-5 flex flex-col items-center">
+          <div id="portrait-carousel-container" class="relative group w-full max-w-md rounded-3xl overflow-hidden border border-white/25 bg-black shadow-2xl lux-card p-2.5">
+            
+            <div class="relative rounded-2xl overflow-hidden aspect-square">
+              <!-- Multi-Pose Image Slides (Auto-Rotated with Smooth Dissolve) -->
+              <img 
+                id="pose-slide-0"
+                src="./aryan_pose_1.jpg" 
+                alt="Aryan Kumar Shaw - Pose 1 (Arms Crossed)" 
+                class="pose-slide absolute inset-0 w-full h-full object-cover object-top opacity-100 scale-100 transition-all duration-700 ease-out"
+              />
+              <img 
+                id="pose-slide-1"
+                src="./aryan_pose_2.jpg" 
+                alt="Aryan Kumar Shaw - Pose 2 (Seated Desk)" 
+                class="pose-slide absolute inset-0 w-full h-full object-cover object-top opacity-0 scale-95 transition-all duration-700 ease-out pointer-events-none"
+              />
+              <img 
+                id="pose-slide-2"
+                src="./aryan_pose_3.jpg" 
+                alt="Aryan Kumar Shaw - Pose 3 (Glasses Adjustment)" 
+                class="pose-slide absolute inset-0 w-full h-full object-cover object-top opacity-0 scale-95 transition-all duration-700 ease-out pointer-events-none"
+              />
+              <img 
+                id="pose-slide-3"
+                src="./aryan_pose_4.jpg" 
+                alt="Aryan Kumar Shaw - Pose 4 (Hand in Pocket)" 
+                class="pose-slide absolute inset-0 w-full h-full object-cover object-top opacity-0 scale-95 transition-all duration-700 ease-out pointer-events-none"
+              />
+              <img 
+                id="pose-slide-4"
+                src="./aryan_pose_5.jpg" 
+                alt="Aryan Kumar Shaw - Pose 5 (Studio Visionary)" 
+                class="pose-slide absolute inset-0 w-full h-full object-cover object-top opacity-0 scale-95 transition-all duration-700 ease-out pointer-events-none"
+              />
+
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none"></div>
+
+              <!-- Floating Bottom Identity Pill -->
+              <div class="absolute bottom-3 left-3 right-3 p-3.5 rounded-xl bg-black/85 backdrop-blur-md border border-white/20 font-mono text-xs flex items-center justify-between pointer-events-none shadow-xl z-20">
+                <div>
+                  <div class="text-white font-bold tracking-tight text-xs sm:text-sm">ARYAN KUMAR SHAW</div>
+                  <div class="text-[9px] text-lux-silver tracking-wider">FULL STACK & SYSTEMS ARCHITECT</div>
+                </div>
+                <div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] border border-emerald-500/30 font-semibold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  ONLINE
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ARCHITECTURAL TELEMETRY HUD & LIVE PUBLIC API INTEGRATION -->
+      <div class="lux-card p-6 sm:p-8 rounded-3xl grid grid-cols-2 lg:grid-cols-4 gap-6 font-mono text-xs">
+        
+        <!-- API Node 1: Live GitHub Profile Telemetry (GitHub REST API) -->
+        <div class="space-y-1">
+          <div class="text-lux-muted text-[10px] uppercase tracking-wider flex items-center justify-between">
+            <span>GITHUB TELEMETRY</span>
+            <span class="text-emerald-400">● LIVE API</span>
+          </div>
+          <div id="github-api-stats" class="text-white font-bold text-sm sm:text-base flex items-center gap-1.5">
+            <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span id="github-repo-count">14 Public Repos</span>
+          </div>
+          <div class="text-[10px] text-lux-silver">@aryanshaw421-alt • SYNCED</div>
+        </div>
+
+        <!-- API Node 2: Kolkata Live Geo & Weather Telemetry (Open-Meteo API) -->
+        <div class="space-y-1">
+          <div class="text-lux-muted text-[10px] uppercase tracking-wider flex items-center justify-between">
+            <span>GEO & WEATHER</span>
+            <span id="weather-status-dot" class="text-emerald-400">● LIVE</span>
+          </div>
+          <div class="text-white font-bold text-sm sm:text-base flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-[#EF4444]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span id="kolkata-weather-display">22.57° N, 88.36° E</span>
+          </div>
+          <div id="kolkata-temp-display" class="text-[10px] text-lux-silver">KOLKATA, WEST BENGAL, IN</div>
+        </div>
+
+        <!-- API Node 3: Real-Time IST Atomic Clock & Edge Latency -->
+        <div class="space-y-1">
+          <div class="text-lux-muted text-[10px] uppercase tracking-wider flex items-center justify-between">
+            <span>LOCAL TIME (IST)</span>
+            <span id="latency-display" class="text-emerald-400 text-[9px]">~16ms EDGE</span>
+          </div>
+          <div id="live-ist-clock" class="text-white font-bold text-sm sm:text-base">
+            --:--:-- IST
+          </div>
+          <div class="text-[10px] text-lux-silver">INDIAN STANDARD TIME</div>
+        </div>
+
+        <!-- API Node 4: Developer CLI Quick-Curl Protocol -->
+        <div class="space-y-1">
+          <div class="text-lux-muted text-[10px] uppercase tracking-wider">TERMINAL QUICK-CURL</div>
+          <div class="flex items-center gap-2">
+            <code class="px-2 py-1 rounded bg-black border border-white/20 text-white text-[11px] font-bold select-all">curl aryan.dev</code>
+            <button id="copy-curl-btn" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-all group" title="Copy curl command">
+              <svg class="w-3.5 h-3.5 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            </button>
+          </div>
+          <div class="text-[10px] text-lux-silver">DEVELOPER CLI PROTOCOL</div>
+        </div>
+      </div>
+
+      <!-- CANDIDATE PROFILE DOSSIER (COMPLETE BIOGRAPHY & IDENTITY MATRIX) -->
+      <div id="about" class="lux-card p-8 sm:p-10 rounded-3xl space-y-6 mt-8">
+        <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-white/10">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-white text-black font-syne font-black flex items-center justify-center shadow-lg border border-white/40 overflow-hidden shiny-btn">
+              <svg class="w-6 h-6 text-black" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 4L26 24H21L16 13.5L11 24H6L16 4Z" fill="#000000"/>
+                <path d="M10.5 27L16 21.5L21.5 27H10.5Z" fill="#000000"/>
+                <circle cx="16" cy="17" r="1.8" fill="#FFFFFF"/>
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-syne font-bold text-white">Aryan Kumar Shaw — Candidate Dossier</h2>
+              <p class="text-xs font-mono text-lux-muted">Verified Engineering Profile • Kolkata, West Bengal, India</p>
+            </div>
+          </div>
+          <span class="px-3.5 py-1.5 rounded-full bg-black border border-white/20 font-mono text-xs text-white font-bold">
+            STATUS: ACTIVE & HIRING READY
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 font-mono text-xs">
+          
+          <!-- Candidate DNA -->
+          <div class="p-5 rounded-2xl bg-black border border-white/10 space-y-2.5">
+            <div class="text-lux-silver uppercase tracking-wider font-bold flex items-center gap-2">
+              <i data-lucide="user" class="w-4 h-4 text-white"></i> CANDIDATE DNA
+            </div>
+            <div class="text-lux-muted space-y-1 text-[11px] leading-relaxed">
+              <div>• <strong class="text-white">Role:</strong> Full Stack & Freelancer</div>
+              <div>• <strong class="text-white">Expertise:</strong> Web Apps & Systems</div>
+              <div>• <strong class="text-white">Mindset:</strong> Client-focused, first-principles</div>
+            </div>
+          </div>
+
+          <!-- Higher Education -->
+          <div class="p-5 rounded-2xl bg-black border border-white/10 space-y-2.5">
+            <div class="text-lux-silver uppercase tracking-wider font-bold flex items-center gap-2">
+              <i data-lucide="graduation-cap" class="w-4 h-4 text-white"></i> EDUCATION
+            </div>
+            <div class="text-lux-muted space-y-1 text-[11px] leading-relaxed">
+              <div>• <strong class="text-white">B.Tech:</strong> CSBS (2025–2029)</div>
+              <div>• <strong class="text-white">College:</strong> NiT Kolkata</div>
+              <div>• <strong class="text-white">School:</strong> Sacred Heart (10+2)</div>
+            </div>
+          </div>
+
+          <!-- Technical Arsenal -->
+          <div class="p-5 rounded-2xl bg-black border border-white/10 space-y-2.5">
+            <div class="text-lux-silver uppercase tracking-wider font-bold flex items-center gap-2">
+              <i data-lucide="code" class="w-4 h-4 text-white"></i> ARSENAL
+            </div>
+            <div class="text-lux-muted space-y-1.5 text-[11px] leading-relaxed">
+              <div class="flex flex-wrap items-center gap-1">
+                <span class="text-white font-bold text-[10px]">Lang:</span>
+                <span class="px-1.5 py-0.5 rounded bg-[#00599C]/20 text-[#659AD2] border border-[#00599C]/40 text-[9px] font-bold">C</span>
+                <span class="px-1.5 py-0.5 rounded bg-[#ED8B00]/20 text-[#FFA940] border border-[#ED8B00]/40 text-[9px] font-bold">Java</span>
+                <span class="px-1.5 py-0.5 rounded bg-[#F7DF1E]/20 text-[#F7DF1E] border border-[#F7DF1E]/40 text-[9px] font-bold">JS</span>
+                <span class="px-1.5 py-0.5 rounded bg-[#7F52FF]/20 text-[#A78BFA] border border-[#7F52FF]/40 text-[9px] font-bold">Kotlin</span>
+              </div>
+              <div class="flex flex-wrap items-center gap-1">
+                <span class="text-white font-bold text-[10px]">Stack:</span>
+                <span class="px-1.5 py-0.5 rounded bg-[#E34F26]/20 text-[#FF6B4A] border border-[#E34F26]/40 text-[9px] font-bold">HTML5</span>
+                <span class="px-1.5 py-0.5 rounded bg-[#06B6D4]/20 text-[#38BDF8] border border-[#06B6D4]/40 text-[9px] font-bold">Tailwind</span>
+                <span class="px-1.5 py-0.5 rounded bg-[#339933]/20 text-[#5FA04E] border border-[#339933]/40 text-[9px] font-bold">Node.js</span>
+              </div>
+              <div class="flex flex-wrap items-center gap-1">
+                <span class="text-white font-bold text-[10px]">Core:</span>
+                <span class="px-1.5 py-0.5 rounded bg-[#10B981]/20 text-[#34D399] border border-[#10B981]/40 text-[9px] font-bold">DSA</span>
+                <span class="px-1.5 py-0.5 rounded bg-[#336791]/20 text-[#60A5FA] border border-[#336791]/40 text-[9px] font-bold">SQL</span>
+                <span class="px-1.5 py-0.5 rounded bg-[#F05032]/20 text-[#FB7185] border border-[#F05032]/40 text-[9px] font-bold">Git</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Transmissions -->
+          <div class="p-5 rounded-2xl bg-black border border-white/10 space-y-2.5">
+            <div class="text-lux-silver uppercase tracking-wider font-bold flex items-center gap-2">
+              <i data-lucide="radio" class="w-4 h-4 text-white"></i> CONTACT
+            </div>
+            <div class="text-lux-muted space-y-1 text-[11px] leading-relaxed">
+              <div>• <strong class="text-white">Email:</strong> aryanshaw421@gmail</div>
+              <div>• <strong class="text-white">Phone:</strong> +91 6291366380</div>
+              <div>• <strong class="text-white">Location:</strong> Kolkata, India</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 02. INTERACTIVE GIT VCS ENGINE SIMULATOR LAB -->
+    <section id="simulator" class="space-y-8">
+      <div class="flex flex-wrap items-end justify-between gap-6">
+        <div>
+          <div class="font-mono text-xs text-lux-muted tracking-widest uppercase mb-2">INTERACTIVE LAB DEMO</div>
+          <h2 class="text-3xl sm:text-5xl lg:text-6xl font-syne font-black text-white tracking-tight">Mini Git Engine Simulator.</h2>
+          <p class="text-lux-muted text-base sm:text-lg mt-2 max-w-2xl">
+            Test the internal SHA-1 hashing, tree serialization, and commit graph construction of Aryan's VCS engine directly in your browser.
+          </p>
+        </div>
+        <span class="px-4 py-2 rounded-xl bg-lux-card border border-white/20 text-white font-mono text-xs font-bold uppercase">
+          WebAssembly/JS Sandbox
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Left: Command Controls -->
+        <div class="lg:col-span-5 lux-card p-8 rounded-3xl flex flex-col justify-between space-y-8">
+          <div class="space-y-6">
+            <div class="flex items-center justify-between pb-4 border-b border-white/10">
+              <span class="font-mono text-sm text-white font-bold flex items-center gap-2.5">
+                <i data-lucide="play-circle" class="w-5 h-5 text-white"></i> VCS EXECUTION PANEL
+              </span>
+              <div class="font-mono text-xs flex items-center gap-1.5">
+                <span class="text-lux-muted">ENGINE:</span>
+                <span class="px-1.5 py-0.5 rounded bg-[#00599C]/25 text-[#659AD2] border border-[#00599C]/50 text-[10px] font-bold">C</span>
+                <span class="px-1.5 py-0.5 rounded bg-[#ED8B00]/25 text-[#FFA940] border border-[#ED8B00]/50 text-[10px] font-bold">JAVA</span>
+              </div>
+            </div>
+
+            <p class="text-sm text-lux-muted leading-relaxed">
+              Click the commands below to simulate low-level SHA-1 object creation, tree graph construction, and commit chaining in real time.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono text-xs">
+              <button id="cmd-init" class="p-4 rounded-xl bg-lux-card border border-white/15 hover:border-white text-white text-left transition-all min-h-[54px] magnetic-element shiny-btn">
+                <div class="font-bold text-sm text-white">$ git init</div>
+                <div class="text-xs text-lux-muted mt-0.5">Initialize repository</div>
+              </button>
+              <button id="cmd-hash" class="p-4 rounded-xl bg-lux-card border border-white/15 hover:border-white text-white text-left transition-all min-h-[54px] magnetic-element shiny-btn">
+                <div class="font-bold text-sm text-white">$ git hash-object</div>
+                <div class="text-xs text-lux-muted mt-0.5">Compute SHA-1 blob</div>
+              </button>
+              <button id="cmd-tree" class="p-4 rounded-xl bg-lux-card border border-white/15 hover:border-white text-white text-left transition-all min-h-[54px] magnetic-element shiny-btn">
+                <div class="font-bold text-sm text-white">$ git write-tree</div>
+                <div class="text-xs text-lux-muted mt-0.5">Serialize tree node</div>
+              </button>
+              <button id="cmd-commit" class="p-4 rounded-xl bg-lux-card border border-white/15 hover:border-white text-white text-left transition-all min-h-[54px] magnetic-element shiny-btn">
+                <div class="font-bold text-sm text-white">$ git commit-tree</div>
+                <div class="text-xs text-lux-muted mt-0.5">Link commit graph</div>
+              </button>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-black border border-white/10 font-mono text-xs text-lux-muted flex items-center justify-between">
+            <span>Project: <strong class="text-white">Mini Git Engine</strong></span>
+            <a href="https://github.com/aryanshaw421-alt" target="_blank" class="text-white hover:underline font-bold flex items-center gap-1.5">
+              GitHub Repo <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Terminal Log Output & Live Code Execution Playground -->
+        <div class="lg:col-span-7 bg-black border border-white/15 rounded-3xl p-8 font-mono text-xs flex flex-col justify-between space-y-6 shadow-2xl relative overflow-hidden">
+          
+          <!-- Tab Bar: Terminal vs Interactive Code Playground -->
+          <div class="flex items-center justify-between pb-4 border-b border-white/10">
+            <div class="flex items-center gap-2">
+              <button id="tab-vcs-log" class="px-3 py-1.5 rounded-lg bg-white text-black font-bold text-xs flex items-center gap-1.5 transition-all">
+                <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
+                <span>VCS Logs</span>
+              </button>
+              <button id="tab-code-runner" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold text-xs flex items-center gap-1.5 transition-all">
+                <i data-lucide="play" class="w-3.5 h-3.5"></i>
+                <span>Live Code Runner</span>
+              </button>
+            </div>
+            <button id="clear-vcs-log" class="text-xs font-bold text-lux-muted hover:text-white px-3 py-1 bg-white/5 rounded-lg">CLEAR</button>
+          </div>
+
+          <!-- View 1: Standard VCS Engine Logs -->
+          <div id="vcs-log-view" class="space-y-3">
+            <div id="vcs-log-output" class="space-y-3 text-lux-light h-64 overflow-y-auto terminal-scroll text-xs leading-relaxed">
+              <div class="text-white font-bold">● [ENGINE ONLINE] Mini Git Engine Simulator initialized.</div>
+              <div class="text-lux-muted">&gt; Ready for VCS operations. Select a command on the left...</div>
+            </div>
+          </div>
+
+          <!-- View 2: Live Code Playground Sandbox (C / Java / JS) -->
+          <div id="code-runner-view" class="hidden space-y-3">
+            <div class="flex items-center justify-between text-[11px]">
+              <div class="flex items-center gap-2">
+                <span class="text-lux-silver">Target Language:</span>
+                <select id="code-lang-select" class="px-2 py-1 rounded bg-lux-card border border-white/20 text-white text-xs focus:outline-none">
+                  <option value="c">C (SHA-1 Fast Digest Engine)</option>
+                  <option value="java">Java (OOP Tree Traversal)</option>
+                  <option value="js">JavaScript (Saree Retail Filter & Cart)</option>
+                </select>
+              </div>
+              <button id="run-code-benchmark-btn" class="px-3 py-1 rounded bg-white text-black font-bold flex items-center gap-1 hover:bg-slate-200">
+                <i data-lucide="play" class="w-3 h-3"></i> Execute & Benchmark
+              </button>
+            </div>
+
+            <!-- Code Editor Box -->
+            <pre id="code-editor-box" class="p-4 rounded-xl bg-lux-card border border-white/10 text-lux-light text-[11px] h-48 overflow-y-auto terminal-scroll leading-relaxed font-mono"></pre>
+            
+            <!-- Execution Metrics -->
+            <div id="code-run-metrics" class="p-2.5 rounded-lg bg-white/5 border border-white/10 text-[10px] text-emerald-400 flex items-center justify-between">
+              <span>Status: Ready to Execute</span>
+              <span>Memory: ~420 KB</span>
+              <span>Execution Time: ~2.4ms</span>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-white/10 flex items-center justify-between text-xs text-lux-muted font-mono">
+            <div class="flex items-center gap-2">
+              <span class="text-white font-bold">STORED OBJECTS:</span>
+              <span id="vcs-object-count" class="font-bold text-white text-sm">0</span>
+            </div>
+            <span>SHA-1 First-Principles Protocol Active</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 03. FEATURED WORK & ARCHITECTURAL BLUEPRINTS -->
+    <section id="projects" class="space-y-12">
+      <div>
+        <div class="font-mono text-xs text-lux-muted tracking-widest uppercase mb-2">SYSTEMS & PLATFORMS</div>
+        <h2 class="text-4xl sm:text-6xl font-syne font-black text-white tracking-tight">Key Technical Projects.</h2>
+        <p class="text-lux-muted text-base sm:text-lg mt-2">Interactive architecture breakdowns and first-principles software engineered by Aryan.</p>
+      </div>
+
+      <!-- Projects Grid: Authentic Repositories from aryanshaw421-alt -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- Project 1: Saree Retail E-Commerce Platform (Freelance Production) -->
+        <div data-project="saree" class="lux-card p-8 rounded-3xl flex flex-col justify-between space-y-6 group hover:border-white/40 transition-all cursor-pointer">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3.5 py-1.5 rounded-full text-[11px] font-mono font-bold bg-white text-black">
+                FREELANCE CLIENT WORK
+              </span>
+              <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></div>
+            </div>
+
+            <h3 class="text-2xl font-syne font-bold text-white group-hover:text-lux-light transition-colors">
+              Saree Retail Commercial Platform
+            </h3>
+
+            <p class="text-lux-muted text-xs sm:text-sm leading-relaxed">
+              Full-featured modern commercial retail platform built for ethnic apparel merchandising. Features high-velocity catalog filtering, shopping cart state synchronization, and checkout pipeline.
+            </p>
+
+            <!-- Architecture Flow -->
+            <div class="p-3.5 rounded-2xl bg-black border border-white/10 space-y-2 font-mono text-[10px]">
+              <div class="text-lux-silver font-bold uppercase text-[9px] tracking-wider flex items-center justify-between">
+                <span>COMMERCE PIPELINE</span>
+                <span class="text-emerald-400">● PRODUCTION DEPLOYMENT</span>
+              </div>
+              <div class="grid grid-cols-4 gap-1 text-center pt-1">
+                <div class="p-1.5 rounded bg-white/5 border border-white/10 text-white">Catalog</div>
+                <div class="p-1.5 rounded bg-white/5 border border-white/10 text-white">Filter</div>
+                <div class="p-1.5 rounded bg-white/5 border border-white/10 text-white">Cart</div>
+                <div class="p-1.5 rounded bg-white text-black font-bold">Checkout</div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2.5 py-1 rounded-lg bg-[#E34F26]/20 border border-[#E34F26]/50 font-mono text-[11px] font-bold text-[#FF6B4A]">HTML5</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[#06B6D4]/20 border border-[#06B6D4]/50 font-mono text-[11px] font-bold text-[#38BDF8]">Tailwind CSS</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[#F7DF1E]/20 border border-[#F7DF1E]/50 font-mono text-[11px] font-bold text-[#F7DF1E]">JavaScript</span>
+              <span class="px-2.5 py-1 rounded-lg bg-emerald-500/20 border border-emerald-500/50 font-mono text-[11px] font-bold text-emerald-300">E-Commerce</span>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <a href="https://github.com/aryanshaw421-alt/SAREE-RETAIL-WEBSITE.git" target="_blank" rel="noopener noreferrer" class="font-mono text-xs font-bold text-white hover:underline flex items-center gap-2 magnetic-element">
+              <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>View Repository</span>
+            </a>
+            <span class="font-mono text-[10px] text-emerald-400 font-bold">CLIENT DELIVERABLE</span>
+          </div>
+        </div>
+
+        <!-- Project 2: Mini Git Engine (Systems VCS Internals) -->
+        <div data-project="git-engine" class="lux-card p-8 rounded-3xl flex flex-col justify-between space-y-6 group hover:border-white/40 transition-all cursor-pointer">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3.5 py-1.5 rounded-full text-[11px] font-mono font-bold bg-[#00599C]/20 text-[#659AD2] border border-[#00599C]/40">
+                SYSTEMS PROGRAMMING
+              </span>
+              <div class="w-2.5 h-2.5 rounded-full bg-[#659AD2] group-hover:scale-150 transition-transform"></div>
+            </div>
+
+            <h3 class="text-2xl font-syne font-bold text-white group-hover:text-lux-light transition-colors">
+              Mini Git Engine
+            </h3>
+
+            <p class="text-lux-muted text-xs sm:text-sm leading-relaxed">
+              First-principles recreation of Git version control internals. Implements SHA-1 content-addressable storage, tree parsing, blob hashing, commit graph traversal, and binary file I/O.
+            </p>
+
+            <!-- Architecture Flow -->
+            <div class="p-3.5 rounded-2xl bg-black border border-white/10 space-y-2 font-mono text-[10px]">
+              <div class="text-lux-silver font-bold uppercase text-[9px] tracking-wider flex items-center justify-between">
+                <span>STORAGE DAG PIPELINE</span>
+                <span class="text-[#659AD2]">● SHA-1 DIGEST</span>
+              </div>
+              <div class="grid grid-cols-4 gap-1 text-center pt-1">
+                <div class="p-1.5 rounded bg-white/5 border border-white/10 text-white">Bytes</div>
+                <div class="p-1.5 rounded bg-white/5 border border-white/10 text-white">SHA-1</div>
+                <div class="p-1.5 rounded bg-white/5 border border-white/10 text-white">Tree</div>
+                <div class="p-1.5 rounded bg-[#00599C] text-white font-bold">Commit</div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2.5 py-1 rounded-lg bg-[#00599C]/20 border border-[#00599C]/50 font-mono text-[11px] font-bold text-[#659AD2]">C</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[#ED8B00]/20 border border-[#ED8B00]/50 font-mono text-[11px] font-bold text-[#FFA940]">Java</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[#EC4899]/20 border border-[#EC4899]/50 font-mono text-[11px] font-bold text-[#F472B6]">SHA-1</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[#10B981]/20 border border-[#10B981]/50 font-mono text-[11px] font-bold text-[#34D399]">DSA</span>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <a href="https://github.com/aryanshaw421-alt" target="_blank" rel="noopener noreferrer" class="font-mono text-xs font-bold text-white hover:underline flex items-center gap-2 magnetic-element">
+              <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>View Repository</span>
+            </a>
+            <span class="font-mono text-[10px] text-[#659AD2] font-bold">CORE SYSTEMS</span>
+          </div>
+        </div>
+
+        <!-- Project 3: BlockVerify (Blockchain & Cryptography) -->
+        <div data-project="blockverify" class="lux-card p-8 rounded-3xl flex flex-col justify-between space-y-6 group hover:border-white/40 transition-all cursor-pointer">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3.5 py-1.5 rounded-full text-[11px] font-mono font-bold bg-[#6366F1]/20 text-[#818CF8] border border-[#6366F1]/30">
+                BLOCKCHAIN & SECURITY
+              </span>
+              <div class="w-2.5 h-2.5 rounded-full bg-[#818CF8] animate-pulse"></div>
+            </div>
+
+            <h3 class="text-2xl font-syne font-bold text-white group-hover:text-lux-light transition-colors">
+              BlockVerify
+            </h3>
+
+            <p class="text-lux-muted text-xs sm:text-sm leading-relaxed">
+              Blockchain-based counterfeit detection & fake product identification system. Integrates immutable ledger tracking with cryptographic QR code validation for supply chain transparency.
+            </p>
+
+            <!-- Architecture Flow -->
+            <div class="p-3.5 rounded-2xl bg-black border border-white/10 space-y-2 font-mono text-[10px]">
+              <div class="text-lux-silver font-bold uppercase text-[9px] tracking-wider flex items-center justify-between">
+                <span>VERIFICATION CHAIN</span>
+                <span class="text-[#818CF8]">● IMMUTABLE LEDGER</span>
+              </div>
+              <div class="grid grid-cols-4 gap-1 text-center pt-1">
+                <div class="p-1.5 rounded bg-white/5 border border-white/10 text-white">QR Scan</div>
+                <div class="p-1.5 rounded bg-white/5 border border-white/10 text-white">Hash</div>
+                <div class="p-1.5 rounded bg-white/5 border border-white/10 text-white">Ledger</div>
+                <div class="p-1.5 rounded bg-[#6366F1] text-white font-bold">Verify</div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2.5 py-1 rounded-lg bg-[#6366F1]/20 border border-[#6366F1]/50 font-mono text-[11px] font-bold text-[#818CF8]">Blockchain</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[#8B5CF6]/20 border border-[#8B5CF6]/50 font-mono text-[11px] font-bold text-[#C084FC]">Cryptography</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/10 border border-white/30 font-mono text-[11px] font-bold text-white">QR Code</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[#F7DF1E]/20 border border-[#F7DF1E]/50 font-mono text-[11px] font-bold text-[#F7DF1E]">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <a href="https://github.com/aryanshaw421-alt/BlockVerify" target="_blank" rel="noopener noreferrer" class="font-mono text-xs font-bold text-white hover:underline flex items-center gap-2 magnetic-element">
+              <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>View Repository</span>
+            </a>
+            <span class="font-mono text-[10px] text-[#818CF8] font-bold">WEB3 INNOVATION</span>
+          </div>
+        </div>
+
+        <!-- Project 4: Hospital Services Management (Full Stack & AI) -->
+        <div data-project="hospital" class="lux-card p-8 rounded-3xl flex flex-col justify-between space-y-6 group hover:border-white/40 transition-all cursor-pointer">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3.5 py-1.5 rounded-full text-[11px] font-mono font-bold bg-[#0284C7]/20 text-[#38BDF8] border border-[#0284C7]/30">
+                HEALTHCARE ERP & AI
+              </span>
+              <div class="w-2.5 h-2.5 rounded-full bg-[#38BDF8] animate-pulse"></div>
+            </div>
+
+            <h3 class="text-2xl font-syne font-bold text-white group-hover:text-lux-light transition-colors">
+              Hospital Services ERP
+            </h3>
+
+            <p class="text-lux-muted text-xs sm:text-sm leading-relaxed">
+              AI-powered hospital management platform streamlining appointment workflows, electronic health records (EHR), doctor scheduling, billing pipelines, and secure role-based access.
+            </p>
+
+            <!-- Architecture Flow -->
+            <div class="p-3.5 rounded-2xl bg-black border border-white/10 space-y-2 font-mono text-[10px]">
+              <div class="text-lux-silver font-bold uppercase text-[9px] tracking-wider flex items-center justify-between">
+                <span>HEALTHCARE WORKFLOW</span>
+                <span class="text-[#38BDF8]">● AI ASSISTED</span>
+              </div>
+              <div class="grid grid-cols-4 gap-1 text-center pt-1">
+                <div class="p-1.5 rounded bg-white/5 border border-white/10 text-white">EHR</div>
+                <div class="p-1.5 rounded bg-white/5 border border-white/10 text-white">Doctor</div>
+                <div class="p-1.5 rounded bg-white/5 border border-white/10 text-white">Billing</div>
+                <div class="p-1.5 rounded bg-[#0284C7] text-white font-bold">Admin</div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2.5 py-1 rounded-lg bg-[#F7DF1E]/20 border border-[#F7DF1E]/50 font-mono text-[11px] font-bold text-[#F7DF1E]">JavaScript</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[#0284C7]/20 border border-[#0284C7]/50 font-mono text-[11px] font-bold text-[#38BDF8]">Healthcare ERP</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[#A855F7]/20 border border-[#A855F7]/50 font-mono text-[11px] font-bold text-[#C084FC]">AI Assistant</span>
+              <span class="px-2.5 py-1 rounded-lg bg-emerald-500/20 border border-emerald-500/50 font-mono text-[11px] font-bold text-emerald-300">RBAC</span>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <a href="https://github.com/aryanshaw421-alt/HOSPITAL-SERVICES" target="_blank" rel="noopener noreferrer" class="font-mono text-xs font-bold text-white hover:underline flex items-center gap-2 magnetic-element">
+              <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>View Repository</span>
+            </a>
+            <span class="font-mono text-[10px] text-[#38BDF8] font-bold">FULL STACK APP</span>
+          </div>
+        </div>
+
+        <!-- Project 5: Hamari Yatra (AI Mobility & Trip Planner) -->
+        <div data-project="hamari-yatra" class="lux-card p-8 rounded-3xl flex flex-col justify-between space-y-6 group hover:border-white/40 transition-all cursor-pointer">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3.5 py-1.5 rounded-full text-[11px] font-mono font-bold bg-[#7F52FF]/20 text-[#A78BFA] border border-[#7F52FF]/30">
+                AI TRAVEL & MOBILITY
+              </span>
+              <div class="w-2.5 h-2.5 rounded-full bg-[#A78BFA] animate-pulse"></div>
+            </div>
+
+            <h3 class="text-2xl font-syne font-bold text-white group-hover:text-lux-light transition-colors">
+              Hamari Yatra
+            </h3>
+
+            <p class="text-lux-muted text-xs sm:text-sm leading-relaxed">
+              AI-driven smart itinerary generation and travel planning application. Engineered with Kotlin to generate customized day-by-day travel routes, transit schedules, and location insights.
+            </p>
+
+            <!-- Architecture Flow -->
+            <div class="p-3.5 rounded-2xl bg-black border border-white/10 space-y-2 font-mono text-[10px]">
+              <div class="text-lux-silver font-bold uppercase text-[9px] tracking-wider flex items-center justify-between">
+                <span>ITINERARY ENGINE</span>
+                <span class="text-[#A78BFA]">● SMART ROUTING</span>
+              </div>
+              <div class="grid grid-cols-4 gap-1 text-center pt-1">
+                <div class="p-1.5 rounded bg-white/5 border border-white/10 text-white">Input</div>
+                <div class="p-1.5 rounded bg-white/5 border border-white/10 text-white">AI Plan</div>
+                <div class="p-1.5 rounded bg-white/5 border border-white/10 text-white">Routes</div>
+                <div class="p-1.5 rounded bg-[#7F52FF] text-white font-bold">Transit</div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2.5 py-1 rounded-lg bg-[#7F52FF]/20 border border-[#7F52FF]/50 font-mono text-[11px] font-bold text-[#A78BFA]">Kotlin</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[#3B82F6]/20 border border-[#3B82F6]/50 font-mono text-[11px] font-bold text-[#60A5FA]">Mobile Architecture</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[#EC4899]/20 border border-[#EC4899]/50 font-mono text-[11px] font-bold text-[#F472B6]">AI Planning</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[#10B981]/20 border border-[#10B981]/50 font-mono text-[11px] font-bold text-[#34D399]">Transit API</span>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <a href="https://github.com/aryanshaw421-alt/hamari-yatra" target="_blank" rel="noopener noreferrer" class="font-mono text-xs font-bold text-white hover:underline flex items-center gap-2 magnetic-element">
+              <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>View Repository</span>
+            </a>
+            <span class="font-mono text-[10px] text-[#A78BFA] font-bold">KOTLIN / MOBILE</span>
+          </div>
+        </div>
+
+        <!-- Project 6: Aryan Flow (Workflow Automation Pipeline) -->
+        <div data-project="aryan-flow" class="lux-card p-8 rounded-3xl flex flex-col justify-between space-y-6 group hover:border-white/40 transition-all cursor-pointer">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3.5 py-1.5 rounded-full text-[11px] font-mono font-bold bg-[#F59E0B]/20 text-[#FBBF24] border border-[#F59E0B]/30">
+                OPEN SOURCE TOOLING
+              </span>
+              <div class="w-2.5 h-2.5 rounded-full bg-[#FBBF24] animate-pulse"></div>
+            </div>
+
+            <h3 class="text-2xl font-syne font-bold text-white group-hover:text-lux-light transition-colors">
+              Aryan Flow
+            </h3>
+
+            <p class="text-lux-muted text-xs sm:text-sm leading-relaxed">
+              Lightweight node-based asynchronous execution engine and visual workflow pipeline orchestrator. Enables modular step chaining and data transformation graphs.
+            </p>
+
+            <!-- Architecture Flow -->
+            <div class="p-3.5 rounded-2xl bg-black border border-white/10 space-y-2 font-mono text-[10px]">
+              <div class="text-lux-silver font-bold uppercase text-[9px] tracking-wider flex items-center justify-between">
+                <span>PIPELINE GRAPH</span>
+                <span class="text-[#FBBF24]">● MIT LICENSE</span>
+              </div>
+              <div class="grid grid-cols-4 gap-1 text-center pt-1">
+                <div class="p-1.5 rounded bg-white/5 border border-white/10 text-white">Nodes</div>
+                <div class="p-1.5 rounded bg-white/5 border border-white/10 text-white">Edges</div>
+                <div class="p-1.5 rounded bg-white/5 border border-white/10 text-white">Async</div>
+                <div class="p-1.5 rounded bg-[#F59E0B] text-black font-bold">Flow</div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2.5 py-1 rounded-lg bg-[#F7DF1E]/20 border border-[#F7DF1E]/50 font-mono text-[11px] font-bold text-[#F7DF1E]">JavaScript</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[#F59E0B]/20 border border-[#F59E0B]/50 font-mono text-[11px] font-bold text-[#FBBF24]">Workflow Engine</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[#06B6D4]/20 border border-[#06B6D4]/50 font-mono text-[11px] font-bold text-[#38BDF8]">Async Pipeline</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/10 border border-white/30 font-mono text-[11px] font-bold text-white">MIT License</span>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <a href="https://github.com/aryanshaw421-alt/ARYAN-FLOW" target="_blank" rel="noopener noreferrer" class="font-mono text-xs font-bold text-white hover:underline flex items-center gap-2 magnetic-element">
+              <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>View Repository</span>
+            </a>
+            <span class="font-mono text-[10px] text-[#FBBF24] font-bold">PIPELINE TOOLING</span>
+          </div>
+        </div>
+                <div class="p-1.5 rounded bg-white text-black font-bold">Exec</div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="px-2.5 py-1 rounded-lg bg-lux-card border border-white/10 font-mono text-[11px] font-semibold text-white">JavaScript</span>
+              <span class="px-2.5 py-1 rounded-lg bg-lux-card border border-white/10 font-mono text-[11px] font-semibold text-white">Workflow Engine</span>
+              <span class="px-2.5 py-1 rounded-lg bg-lux-card border border-white/10 font-mono text-[11px] font-semibold text-white">Graph Execution</span>
+              <span class="px-2.5 py-1 rounded-lg bg-lux-card border border-white/10 font-mono text-[11px] font-semibold text-white">Open Source</span>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <a href="https://github.com/aryanshaw421-alt/ARYAN-FLOW" target="_blank" rel="noopener noreferrer" class="font-mono text-xs font-bold text-white hover:underline flex items-center gap-2 magnetic-element">
+              <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>View Repository</span>
+            </a>
+            <span class="font-mono text-[10px] text-[#FBBF24] font-bold">PIPELINE TOOL</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- LIVE GITHUB COMMIT HEATMAP & METRICS MATRIX -->
+      <div class="lux-card p-8 sm:p-10 rounded-3xl space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-white/10">
+          <div>
+            <h3 class="text-xl font-syne font-bold text-white flex items-center gap-2">
+              <i data-lucide="git-commit" class="w-5 h-5 text-white"></i> Engineering Velocity & Activity Matrix
+            </h3>
+            <p class="text-xs font-mono text-lux-muted mt-0.5">Telemetry metrics & verified commit cadence for @aryanshaw421-alt</p>
+          </div>
+          <div class="flex items-center gap-2 font-mono text-xs">
+            <span class="text-lux-silver">Total Tracked Commits:</span>
+            <span class="px-2.5 py-0.5 rounded bg-white text-black font-bold">250+</span>
+          </div>
+        </div>
+
+        <!-- Simulated Activity Heatmap Grid -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between text-[11px] font-mono text-lux-muted">
+            <span>Jan 2026</span>
+            <span>Mar 2026</span>
+            <span>May 2026</span>
+            <span>Jul 2026</span>
+            <span>Aug 2026 (Active)</span>
+          </div>
+          
+          <div class="grid grid-flow-col grid-rows-7 gap-1.5 overflow-x-auto pb-2">
+            <!-- 7 rows x 26 cols of activity blocks -->
+            <script>
+              // Dynamically generated commit dots
+            </script>
+            <div id="heatmap-container" class="contents"></div>
+          </div>
+
+          <div class="flex items-center justify-between text-[10px] font-mono text-lux-muted pt-1">
+            <span>Monochrome Intensity Scale</span>
+            <div class="flex items-center gap-1.5">
+              <span>Less</span>
+              <span class="w-2.5 h-2.5 rounded-sm bg-white/10"></span>
+              <span class="w-2.5 h-2.5 rounded-sm bg-white/30"></span>
+              <span class="w-2.5 h-2.5 rounded-sm bg-white/60"></span>
+              <span class="w-2.5 h-2.5 rounded-sm bg-white"></span>
+              <span>More</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 04. TECHNICAL COMPETENCIES -->
+    <section id="skills" class="space-y-10">
+      <div>
+        <div class="font-mono text-xs text-lux-muted tracking-widest uppercase mb-2">COMPETENCIES</div>
+        <h2 class="text-4xl sm:text-6xl font-syne font-black text-white tracking-tight">Technical Skills & Arsenal.</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Programming -->
+        <div class="lux-card p-8 rounded-3xl flex flex-col justify-between space-y-6">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-lux-card border border-white/20 flex items-center justify-center text-white mb-6 shadow-lg">
+              <i data-lucide="terminal" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg font-display">Programming Languages</h3>
+            <p class="text-xs text-lux-muted mt-2">Foundational systems & modern development languages.</p>
+          </div>
+          <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
+            <span class="px-3 py-1.5 rounded-xl bg-[#00599C]/20 border border-[#00599C]/50 text-[#659AD2] shadow-sm flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#659AD2]"></span> C
+            </span>
+            <span class="px-3 py-1.5 rounded-xl bg-[#ED8B00]/20 border border-[#ED8B00]/50 text-[#FFA940] shadow-sm flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#FFA940]"></span> Java
+            </span>
+            <span class="px-3 py-1.5 rounded-xl bg-[#F7DF1E]/20 border border-[#F7DF1E]/50 text-[#F7DF1E] shadow-sm flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#F7DF1E]"></span> JavaScript
+            </span>
+            <span class="px-3 py-1.5 rounded-xl bg-[#7F52FF]/20 border border-[#7F52FF]/50 text-[#A78BFA] shadow-sm flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#A78BFA]"></span> Kotlin
+            </span>
+          </div>
+        </div>
+
+        <!-- Frontend & UI -->
+        <div class="lux-card p-8 rounded-3xl flex flex-col justify-between space-y-6">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-lux-card border border-white/20 flex items-center justify-center text-white mb-6 shadow-lg">
+              <i data-lucide="layout" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg font-display">Frontend & Design</h3>
+            <p class="text-xs text-lux-muted mt-2">Responsive, modern visual design systems & styling.</p>
+          </div>
+          <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
+            <span class="px-3 py-1.5 rounded-xl bg-[#E34F26]/20 border border-[#E34F26]/50 text-[#FF6B4A] shadow-sm flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#E34F26]"></span> HTML5
+            </span>
+            <span class="px-3 py-1.5 rounded-xl bg-[#1572B6]/20 border border-[#1572B6]/50 text-[#339AF0] shadow-sm flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#1572B6]"></span> CSS3
+            </span>
+            <span class="px-3 py-1.5 rounded-xl bg-[#06B6D4]/20 border border-[#06B6D4]/50 text-[#38BDF8] shadow-sm flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#06B6D4]"></span> Tailwind CSS
+            </span>
+            <span class="px-3 py-1.5 rounded-xl bg-white/10 border border-white/20 text-white shadow-sm flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Responsive UI
+            </span>
+          </div>
+        </div>
+
+        <!-- Core CS -->
+        <div class="lux-card p-8 rounded-3xl flex flex-col justify-between space-y-6">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-lux-card border border-white/20 flex items-center justify-center text-white mb-6 shadow-lg">
+              <i data-lucide="database" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg font-display">Core Computer Science</h3>
+            <p class="text-xs text-lux-muted mt-2">Data structures, algorithmic complexity & databases.</p>
+          </div>
+          <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
+            <span class="px-3 py-1.5 rounded-xl bg-[#10B981]/20 border border-[#10B981]/50 text-[#34D399] shadow-sm flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span> DSA
+            </span>
+            <span class="px-3 py-1.5 rounded-xl bg-[#336791]/20 border border-[#336791]/50 text-[#60A5FA] shadow-sm flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#336791]"></span> DBMS
+            </span>
+            <span class="px-3 py-1.5 rounded-xl bg-[#4479A1]/20 border border-[#4479A1]/50 text-[#93C5FD] shadow-sm flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#4479A1]"></span> SQL
+            </span>
+            <span class="px-3 py-1.5 rounded-xl bg-[#6366F1]/20 border border-[#6366F1]/50 text-[#818CF8] shadow-sm flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#6366F1]"></span> Web3 / Ledger
+            </span>
+          </div>
+        </div>
+
+        <!-- Tooling -->
+        <div class="lux-card p-8 rounded-3xl flex flex-col justify-between space-y-6">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-lux-card border border-white/20 flex items-center justify-center text-white mb-6 shadow-lg">
+              <i data-lucide="cpu" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-white text-lg font-display">Developer Ecosystem</h3>
+            <p class="text-xs text-lux-muted mt-2">Terminal workflows, versioning and dev runtime tools.</p>
+          </div>
+          <div class="flex flex-wrap gap-2 font-mono text-xs font-bold">
+            <span class="px-3 py-1.5 rounded-xl bg-[#F05032]/20 border border-[#F05032]/50 text-[#FB7185] shadow-sm flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#F05032]"></span> Git
+            </span>
+            <span class="px-3 py-1.5 rounded-xl bg-white/10 border border-white/30 text-white shadow-sm flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-white"></span> GitHub
+            </span>
+            <span class="px-3 py-1.5 rounded-xl bg-[#007ACC]/20 border border-[#007ACC]/50 text-[#38BDF8] shadow-sm flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#007ACC]"></span> VS Code
+            </span>
+            <span class="px-3 py-1.5 rounded-xl bg-[#339933]/20 border border-[#339933]/50 text-[#5FA04E] shadow-sm flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#339933]"></span> Node.js
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 05. ACADEMIC BACKGROUND -->
+    <section id="education" class="space-y-10">
+      <div>
+        <div class="font-mono text-xs text-lux-muted tracking-widest uppercase mb-2">FOUNDATION</div>
+        <h2 class="text-4xl sm:text-6xl font-syne font-black text-white tracking-tight">Education & Milestones.</h2>
+      </div>
+
+      <div class="space-y-8">
+        <!-- Node 1: NiT CSBS -->
+        <div class="lux-card p-10 sm:p-12 rounded-3xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div class="space-y-3">
+            <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-lux-card border border-white/20 text-white font-mono text-xs font-bold">
+              2025 — 2029 (UNDERGRADUATE)
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-syne font-bold text-white">Bachelor of Technology (B.Tech) in CSBS</h3>
+            <p class="text-base text-lux-muted">
+              Computer Science and Business Systems • <strong class="text-white">Narula Institute of Technology (NiT), Kolkata</strong>
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="px-2.5 py-1 rounded-lg bg-[#10B981]/15 border border-[#10B981]/40 font-mono text-[11px] font-bold text-[#34D399]">Data Structures & Algorithms</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[#336791]/15 border border-[#336791]/40 font-mono text-[11px] font-bold text-[#60A5FA]">DBMS & SQL</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[#00599C]/15 border border-[#00599C]/40 font-mono text-[11px] font-bold text-[#659AD2]">C Systems</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[#ED8B00]/15 border border-[#ED8B00]/40 font-mono text-[11px] font-bold text-[#FFA940]">Java OOP</span>
+              <span class="px-2.5 py-1 rounded-lg bg-[#6366F1]/15 border border-[#6366F1]/40 font-mono text-[11px] font-bold text-[#818CF8]">Business Systems</span>
+            </div>
+          </div>
+          <div class="font-mono text-sm font-bold text-emerald-400 bg-black px-6 py-3 rounded-xl border border-white/10 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            STATUS: ACTIVE
+          </div>
+        </div>
+
+        <!-- Node 2: School -->
+        <div class="lux-card p-10 sm:p-12 rounded-3xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div class="space-y-3">
+            <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-lux-card border border-white/20 text-white font-mono text-xs font-bold">
+              HIGHER SECONDARY (10+2)
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-syne font-bold text-white">Science & Mathematics Stream</h3>
+            <p class="text-base text-lux-muted">
+              Sacred Heart Day High School • Focus in Physics, Chemistry & Advanced Mathematics
+            </p>
+          </div>
+          <div class="font-mono text-sm font-bold text-lux-muted bg-black px-6 py-3 rounded-xl border border-white/10">
+            STATUS: COMPLETED
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06. CONTACT / TRANSMISSION DECK & FAST MESSAGE FORM -->
+    <section id="contact" class="space-y-12">
+      <div class="lux-card p-10 sm:p-16 rounded-3xl space-y-10 relative overflow-hidden">
+        
+        <div class="max-w-3xl mx-auto text-center space-y-4">
+          <div class="font-mono text-xs text-lux-muted tracking-widest uppercase font-bold">TRANSMISSION DECK</div>
+          <h2 class="text-4xl sm:text-6xl md:text-7xl font-syne font-black text-white tracking-tight">
+            CONNECT WITH ARYAN.
+          </h2>
+          <p class="text-lux-muted text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
+            Interested in collaborating, discussing systems engineering, or exploring developer roles? Send a message or reach out directly.
+          </p>
+        </div>
+
+        <!-- Interactive Direct Message Form -->
+        <div class="max-w-2xl mx-auto p-8 rounded-3xl bg-black border border-white/15 shadow-2xl space-y-6">
+          <div class="flex items-center justify-between pb-4 border-b border-white/10">
+            <span class="font-mono text-xs text-white font-bold flex items-center gap-2">
+              <i data-lucide="send" class="w-4 h-4 text-white"></i> FAST TRANSMISSION FORM
+            </span>
+            <span class="font-mono text-[10px] text-emerald-400 font-semibold">● DIRECT TO ARYAN</span>
+          </div>
+
+          <form id="contact-form" class="space-y-4 font-mono text-xs">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-lux-silver text-[11px] mb-1.5 uppercase font-bold">Your Name</label>
+                <input 
+                  type="text" 
+                  id="form-name" 
+                  required 
+                  placeholder="e.g. Satya Nadella" 
+                  class="w-full px-4 py-3 rounded-xl bg-lux-card border border-white/15 text-white placeholder:text-lux-muted focus:border-white focus:outline-none transition-all"
+                />
+              </div>
+              <div>
+                <label class="block text-lux-silver text-[11px] mb-1.5 uppercase font-bold">Your Email / Handle</label>
+                <input 
+                  type="email" 
+                  id="form-email" 
+                  required 
+                  placeholder="name@company.com" 
+                  class="w-full px-4 py-3 rounded-xl bg-lux-card border border-white/15 text-white placeholder:text-lux-muted focus:border-white focus:outline-none transition-all"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-lux-silver text-[11px] mb-1.5 uppercase font-bold">Project / Role Details</label>
+              <textarea 
+                id="form-message" 
+                rows="3" 
+                required 
+                placeholder="We'd love to talk about building developer platforms / full-stack engineering opportunities..." 
+                class="w-full px-4 py-3 rounded-xl bg-lux-card border border-white/15 text-white placeholder:text-lux-muted focus:border-white focus:outline-none transition-all"
+              ></textarea>
+            </div>
+
+            <button 
+              type="submit" 
+              class="w-full py-4 rounded-xl bg-white text-black font-bold uppercase tracking-wider hover:bg-slate-200 transition-all flex items-center justify-center gap-2 shadow-xl magnetic-element shiny-btn border-beam-btn min-h-[48px]"
+            >
+              <svg class="w-4 h-4 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              <span>Send Transmission to Aryan</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- 1-Click WhatsApp & Mail Direct Action Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <button id="copy-email-bottom" class="magnetic-element shiny-btn px-6 py-4 rounded-2xl bg-white text-black hover:bg-slate-200 font-mono text-xs sm:text-sm font-black transition-all flex items-center gap-2.5 shadow-2xl min-h-[50px] group">
+            <svg class="w-4 h-4 text-[#EA4335]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span>aryanshaw421@gmail.com</span>
+            <svg class="w-3.5 h-3.5 opacity-70 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+          </button>
+
+          <a href="https://wa.me/916291366380" target="_blank" rel="noopener noreferrer" id="whatsapp-direct-btn" class="magnetic-element border-beam-btn px-6 py-4 rounded-2xl bg-[#25D366]/15 hover:bg-[#25D366]/25 border border-[#25D366]/50 text-white font-mono text-xs sm:text-sm font-bold transition-all flex items-center gap-2.5 shadow-2xl min-h-[50px] group">
+            <svg class="w-4 h-4 fill-[#25D366] group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>WhatsApp (+91 6291366380)</span>
+            <svg class="w-3.5 h-3.5 opacity-70 group-hover:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="pt-4 flex flex-wrap items-center justify-center gap-6 font-mono text-xs text-lux-muted">
+          <a href="https://github.com/aryanshaw421-alt" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-2 magnetic-element group">
+            <svg class="w-4 h-4 fill-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>github.com/aryanshaw421-alt</span>
+          </a>
+          <span>•</span>
+          <a href="https://www.linkedin.com/in/aryan-kumar-shaw-70334b254/" target="_blank" rel="noopener noreferrer" class="text-[#0A66C2] hover:underline transition-colors flex items-center gap-2 magnetic-element group">
+            <svg class="w-4 h-4 fill-[#0A66C2] group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <span>linkedin.com/in/aryan-kumar-shaw</span>
+          </a>
+          <span>•</span>
+          <a href="https://www.instagram.com/aryan_m340i/" target="_blank" rel="noopener noreferrer" class="text-[#E4405F] hover:underline transition-colors flex items-center gap-2 magnetic-element group">
+            <svg class="w-4 h-4 fill-[#E4405F] group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span>instagram.com/aryan_m340i</span>
+          </a>
+          <span>•</span>
+          <span class="flex items-center gap-2 text-white">
+            <svg class="w-4 h-4 text-[#EF4444]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Kolkata, India</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MINIMALIST FOOTER -->
+  <footer class="border-t border-white/10 py-10 font-mono text-sm text-lux-muted relative z-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-white text-black flex items-center justify-center shadow-md">
+          <svg class="w-5 h-5 text-black" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 4L26 24H21L16 13.5L11 24H6L16 4Z" fill="#000000"/>
+            <path d="M10.5 27L16 21.5L21.5 27H10.5Z" fill="#000000"/>
+            <circle cx="16" cy="17" r="1.8" fill="#FFFFFF"/>
+          </svg>
+        </div>
+        <div>
+          © 2026 <span class="text-white font-bold">Aryan Kumar Shaw</span> — Built with First-Principles Precision.
+        </div>
+      </div>
+      <a href="#hero" class="text-white hover:underline flex items-center gap-1.5 font-bold magnetic-element">
+        [BACK TO TOP ↑]
+      </a>
+    </div>
+  </footer>
+
+  <!-- ATS RESUME / CV MODAL -->
+  <div id="cv-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl hidden items-center justify-center p-4">
+    <div class="lux-card rounded-3xl max-w-3xl w-full max-h-[90vh] flex flex-col overflow-hidden shadow-2xl border border-white/20">
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between p-6 border-b border-white/10 bg-black">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-white text-black flex items-center justify-center">
+            <i data-lucide="file-text" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-syne font-bold text-white text-lg">Aryan Kumar Shaw — Official Resume</h3>
+            <span class="text-xs font-mono text-lux-muted">Full Stack Engineer • B.Tech CSBS Undergrad</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="print-cv-btn" class="px-4 py-2 rounded-xl bg-white text-black text-xs font-mono font-bold flex items-center gap-1.5 hover:bg-slate-200 transition-all min-h-[40px] magnetic-element">
+            <i data-lucide="printer" class="w-4 h-4"></i> Print / Save PDF
+          </button>
+          <button id="close-cv-modal" class="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white min-h-[40px] min-w-[40px] flex items-center justify-center">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Printable Resume Body -->
+      <div id="printable-cv" class="p-8 sm:p-10 overflow-y-auto font-sans text-lux-light text-sm space-y-6 bg-black">
+        <div class="border-b border-white/10 pb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div>
+            <h1 class="text-3xl sm:text-4xl font-syne font-black text-white">Aryan Kumar Shaw</h1>
+            <p class="text-white font-mono text-base mt-1 font-semibold">Full Stack Engineer | B.Tech CSBS Undergrad</p>
+            <p class="text-lux-muted text-xs mt-2 flex flex-wrap gap-4 font-mono">
+              <span>📍 Kolkata, West Bengal, India</span>
+              <span>✉️ aryanshaw421@gmail.com</span>
+              <span>📞 +91 6291366380</span>
+              <span>🌐 github.com/aryanshaw421-alt</span>
+            </p>
+          </div>
+          <img 
+            src="./aryan_portrait.jpg" 
+            alt="Aryan Kumar Shaw" 
+            class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover object-top border border-white/20 shadow-xl"
+          />
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs text-white uppercase tracking-wider font-bold mb-2">Professional Summary</h4>
+          <p class="text-sm text-lux-muted leading-relaxed">
+            Ambitious and highly focused Full Stack Engineer with strong foundations in Systems Programming (C, Java), Modern Web Development (HTML5, CSS3, Tailwind CSS, JavaScript, Node.js), and Core Computer Science (DSA, DBMS, SQL). Passionate about building developer tools and low-level software from first principles.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs text-white uppercase tracking-wider font-bold mb-3">Technical Competencies</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono">
+            <div class="flex items-center gap-1.5 flex-wrap"><strong class="text-white">Programming:</strong> <span class="px-1.5 py-0.5 rounded bg-[#00599C]/20 text-[#659AD2] border border-[#00599C]/40 text-[10px] font-bold">C</span> <span class="px-1.5 py-0.5 rounded bg-[#ED8B00]/20 text-[#FFA940] border border-[#ED8B00]/40 text-[10px] font-bold">Java</span> <span class="px-1.5 py-0.5 rounded bg-[#F7DF1E]/20 text-[#F7DF1E] border border-[#F7DF1E]/40 text-[10px] font-bold">JavaScript</span> <span class="px-1.5 py-0.5 rounded bg-[#7F52FF]/20 text-[#A78BFA] border border-[#7F52FF]/40 text-[10px] font-bold">Kotlin</span></div>
+            <div class="flex items-center gap-1.5 flex-wrap"><strong class="text-white">Frontend:</strong> <span class="px-1.5 py-0.5 rounded bg-[#E34F26]/20 text-[#FF6B4A] border border-[#E34F26]/40 text-[10px] font-bold">HTML5</span> <span class="px-1.5 py-0.5 rounded bg-[#1572B6]/20 text-[#339AF0] border border-[#1572B6]/40 text-[10px] font-bold">CSS3</span> <span class="px-1.5 py-0.5 rounded bg-[#06B6D4]/20 text-[#38BDF8] border border-[#06B6D4]/40 text-[10px] font-bold">Tailwind CSS</span></div>
+            <div class="flex items-center gap-1.5 flex-wrap"><strong class="text-white">Core CS:</strong> <span class="px-1.5 py-0.5 rounded bg-[#10B981]/20 text-[#34D399] border border-[#10B981]/40 text-[10px] font-bold">DSA</span> <span class="px-1.5 py-0.5 rounded bg-[#336791]/20 text-[#60A5FA] border border-[#336791]/40 text-[10px] font-bold">DBMS</span> <span class="px-1.5 py-0.5 rounded bg-[#4479A1]/20 text-[#93C5FD] border border-[#4479A1]/40 text-[10px] font-bold">SQL</span></div>
+            <div class="flex items-center gap-1.5 flex-wrap"><strong class="text-white">Tools:</strong> <span class="px-1.5 py-0.5 rounded bg-[#F05032]/20 text-[#FB7185] border border-[#F05032]/40 text-[10px] font-bold">Git</span> <span class="px-1.5 py-0.5 rounded bg-white/10 text-white border border-white/20 text-[10px] font-bold">GitHub</span> <span class="px-1.5 py-0.5 rounded bg-[#007ACC]/20 text-[#38BDF8] border border-[#007ACC]/40 text-[10px] font-bold">VS Code</span> <span class="px-1.5 py-0.5 rounded bg-[#339933]/20 text-[#5FA04E] border border-[#339933]/40 text-[10px] font-bold">Node.js</span></div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs text-white uppercase tracking-wider font-bold mb-3">Key Technical Projects & Production Deliverables</h4>
+          <div class="space-y-4 text-xs">
+            <div>
+              <div class="flex justify-between font-bold text-white text-sm">
+                <span>Saree Retail Commercial Platform (Freelance Client Deliverable)</span>
+                <span class="font-mono text-emerald-400">E-Commerce, HTML5, CSS3, Tailwind, JS</span>
+              </div>
+              <p class="text-lux-muted mt-1 text-xs">Architected and shipped a full-featured commercial retail platform with responsive product showcases, customer filtering pipelines, shopping cart orchestration, and modern UI.</p>
+            </div>
+            <div>
+              <div class="flex justify-between font-bold text-white text-sm">
+                <span>BlockVerify (Blockchain Fake Product Identification)</span>
+                <span class="font-mono text-[#818CF8]">Blockchain, Web3, Cryptographic QR, JS</span>
+              </div>
+              <p class="text-lux-muted mt-1 text-xs">Anti-counterfeiting supply chain verification system utilizing immutable decentralized ledger tracking and cryptographic QR verification.</p>
+            </div>
+            <div>
+              <div class="flex justify-between font-bold text-white text-sm">
+                <span>Hospital Services ERP (AI-Powered Healthcare Management)</span>
+                <span class="font-mono text-[#38BDF8]">Full Stack JS, EHR, AI Assistant, RBAC</span>
+              </div>
+              <p class="text-lux-muted mt-1 text-xs">Healthcare administration portal automating appointments, medical electronic health records, billing pipelines, and doctor scheduling.</p>
+            </div>
+            <div>
+              <div class="flex justify-between font-bold text-white text-sm">
+                <span>Mini Git Engine (Systems Programming / Core VCS)</span>
+                <span class="font-mono text-lux-muted">C, Java, SHA-1 Hashing, DSA</span>
+              </div>
+              <p class="text-lux-muted mt-1 text-xs">First-principles recreation of Git version control internals, managing SHA-1 content hashing, tree parsing, blob generation, and commit graphs.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-xs text-white uppercase tracking-wider font-bold mb-2">Education</h4>
+          <div class="space-y-2 text-xs">
+            <div class="flex justify-between font-bold text-white text-sm">
+              <span>Bachelor of Technology (B.Tech) in CSBS — Narula Institute of Technology, Kolkata</span>
+              <span class="font-mono text-white">2025 — 2029</span>
+            </div>
+            <div class="flex justify-between font-bold text-white text-sm">
+              <span>Class 10 + 2 (Science & Mathematics) — Sacred Heart Day High School</span>
+              <span class="font-mono text-lux-muted">Completed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-8 right-8 z-50 px-6 py-4 rounded-2xl bg-black border border-white/30 text-sm font-mono text-white flex items-center gap-3 shadow-2xl transform translate-y-24 opacity-0 transition-all duration-300">
+    <i data-lucide="check" class="w-5 h-5 text-white"></i>
+    <span id="toast-text">Copied to clipboard</span>
+  </div>
+
+  <!-- SPOTLIGHT COMMAND PALETTE MODAL (CMD + K) -->
+  <div id="cmd-k-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-xl hidden items-start justify-center pt-24 px-4">
+    <div class="lux-card rounded-3xl max-w-xl w-full flex flex-col overflow-hidden shadow-2xl border border-white/20">
+      
+      <!-- Input Search Field -->
+      <div class="p-4 sm:p-5 border-b border-white/10 flex items-center gap-3 bg-black">
+        <i data-lucide="search" class="w-5 h-5 text-lux-muted"></i>
+        <input 
+          type="text" 
+          id="cmd-k-input" 
+          placeholder="Type a command or jump to section..." 
+          class="w-full bg-transparent text-sm sm:text-base font-mono text-white placeholder:text-lux-muted focus:outline-none"
+        />
+        <kbd class="px-2 py-0.5 rounded bg-white/10 text-[10px] text-lux-muted font-mono">ESC</kbd>
+      </div>
+
+      <!-- Quick Actions List -->
+      <div id="cmd-k-results" class="p-3 max-h-80 overflow-y-auto space-y-1 font-mono text-xs">
+        
+        <button data-action="goto-hero" class="w-full p-3 rounded-xl flex items-center justify-between text-left hover:bg-white/10 text-white transition-colors">
+          <div class="flex items-center gap-3">
+            <i data-lucide="home" class="w-4 h-4 text-lux-silver"></i>
+            <span>[01] Return to Top (Hero)</span>
+          </div>
+          <span class="text-[10px] text-lux-muted">Section</span>
+        </button>
+
+        <button data-action="goto-projects" class="w-full p-3 rounded-xl flex items-center justify-between text-left hover:bg-white/10 text-white transition-colors">
+          <div class="flex items-center gap-3">
+            <i data-lucide="folder-git-2" class="w-4 h-4 text-lux-silver"></i>
+            <span>[02] View Projects Portfolio Grid (6 Repositories)</span>
+          </div>
+          <span class="text-[10px] text-lux-muted">Section</span>
+        </button>
+
+        <button data-action="open-saree-repo" class="w-full p-3 rounded-xl flex items-center justify-between text-left hover:bg-white/10 text-white transition-colors">
+          <div class="flex items-center gap-3">
+            <i data-lucide="shopping-bag" class="w-4 h-4 text-emerald-400"></i>
+            <span>[03] Open Saree Retail E-Commerce Repo</span>
+          </div>
+          <span class="text-[10px] text-emerald-400 font-bold">External</span>
+        </button>
+
+        <button data-action="open-blockverify" class="w-full p-3 rounded-xl flex items-center justify-between text-left hover:bg-white/10 text-white transition-colors">
+          <div class="flex items-center gap-3">
+            <i data-lucide="shield-check" class="w-4 h-4 text-[#818CF8]"></i>
+            <span>[04] Open BlockVerify (Blockchain Repo)</span>
+          </div>
+          <span class="text-[10px] text-[#818CF8] font-bold">External</span>
+        </button>
+
+        <button data-action="open-hospital" class="w-full p-3 rounded-xl flex items-center justify-between text-left hover:bg-white/10 text-white transition-colors">
+          <div class="flex items-center gap-3">
+            <i data-lucide="activity" class="w-4 h-4 text-[#38BDF8]"></i>
+            <span>[05] Open Hospital Services ERP Repo</span>
+          </div>
+          <span class="text-[10px] text-[#38BDF8] font-bold">External</span>
+        </button>
+
+        <button data-action="open-hamari-yatra" class="w-full p-3 rounded-xl flex items-center justify-between text-left hover:bg-white/10 text-white transition-colors">
+          <div class="flex items-center gap-3">
+            <i data-lucide="compass" class="w-4 h-4 text-[#34D399]"></i>
+            <span>[06] Open Hamari Yatra (Kotlin AI Repo)</span>
+          </div>
+          <span class="text-[10px] text-[#34D399] font-bold">External</span>
+        </button>
+
+        <button data-action="open-aryan-flow" class="w-full p-3 rounded-xl flex items-center justify-between text-left hover:bg-white/10 text-white transition-colors">
+          <div class="flex items-center gap-3">
+            <i data-lucide="workflow" class="w-4 h-4 text-[#FBBF24]"></i>
+            <span>[07] Open Aryan Flow (Workflow Engine Repo)</span>
+          </div>
+          <span class="text-[10px] text-[#FBBF24] font-bold">External</span>
+        </button>
+
+        <button data-action="goto-vcs" class="w-full p-3 rounded-xl flex items-center justify-between text-left hover:bg-white/10 text-white transition-colors">
+          <div class="flex items-center gap-3">
+            <i data-lucide="terminal" class="w-4 h-4 text-lux-silver"></i>
+            <span>[08] Launch VCS Engine Sandbox</span>
+          </div>
+          <span class="text-[10px] text-lux-muted">Interactive</span>
+        </button>
+
+        <button data-action="open-cv" class="w-full p-3 rounded-xl flex items-center justify-between text-left hover:bg-white/10 text-white transition-colors">
+          <div class="flex items-center gap-3">
+            <i data-lucide="file-text" class="w-4 h-4 text-lux-silver"></i>
+            <span>[09] View / Print ATS Resume PDF</span>
+          </div>
+          <span class="text-[10px] text-lux-muted">Document</span>
+        </button>
+
+        <button data-action="copy-email" class="w-full p-3 rounded-xl flex items-center justify-between text-left hover:bg-white/10 text-white transition-colors">
+          <div class="flex items-center gap-3">
+            <i data-lucide="mail" class="w-4 h-4 text-lux-silver"></i>
+            <span>[10] Copy Email (aryanshaw421@gmail.com)</span>
+          </div>
+          <span class="text-[10px] text-lux-muted">Clipboard</span>
+        </button>
+
+        <button data-action="copy-phone" class="w-full p-3 rounded-xl flex items-center justify-between text-left hover:bg-white/10 text-white transition-colors">
+          <div class="flex items-center gap-3">
+            <i data-lucide="phone" class="w-4 h-4 text-lux-silver"></i>
+            <span>[11] Copy Phone (+91 6291366380)</span>
+          </div>
+          <span class="text-[10px] text-lux-muted">Clipboard</span>
+        </button>
+
+        <button data-action="open-instagram" class="w-full p-3 rounded-xl flex items-center justify-between text-left hover:bg-white/10 text-white transition-colors">
+          <div class="flex items-center gap-3">
+            <svg class="w-4 h-4 fill-[#E4405F]" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span>[12] Open Instagram Profile (@aryan_m340i)</span>
+          </div>
+          <span class="text-[10px] text-[#E4405F] font-bold">Social</span>
+        </button>
+
+        <button data-action="open-whatsapp" class="w-full p-3 rounded-xl flex items-center justify-between text-left hover:bg-white/10 text-white transition-colors">
+          <div class="flex items-center gap-3">
+            <svg class="w-4 h-4 fill-[#25D366]" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>[13] Chat on WhatsApp (+91 6291366380)</span>
+          </div>
+          <span class="text-[10px] text-[#25D366] font-bold">Direct</span>
+        </button>
+
+        <button data-action="toggle-audio" class="w-full p-3 rounded-xl flex items-center justify-between text-left hover:bg-white/10 text-white transition-colors">
+          <div class="flex items-center gap-3">
+            <i data-lucide="volume-2" class="w-4 h-4 text-lux-silver"></i>
+            <span>[14] Toggle Audio Synthesizer FX</span>
+          </div>
+          <span class="text-[10px] text-lux-muted">Audio</span>
+        </button>
+
+      </div>
+
+      <div class="p-3 border-t border-white/10 bg-black/60 font-mono text-[10px] text-lux-muted flex items-center justify-between">
+        <span>Use Arrow keys or Click to execute</span>
+        <span>Developer Command Palette</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SCRIPT ENGINE -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Initialize Icons
+      if (window.lucide) window.lucide.createIcons();
+
+      // Live IST Clock
+      const clockEl = document.getElementById('live-ist-clock');
+      function updateClock() {
+        if (!clockEl) return;
+        const now = new Date();
+        const options = { timeZone: 'Asia/Kolkata', hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' };
+        clockEl.textContent = `${now.toLocaleTimeString('en-US', options)} IST`;
+      }
+      setInterval(updateClock, 1000);
+      updateClock();
+
+      // Live GitHub Telemetry API Integration (api.github.com)
+      async function fetchGitHubTelemetry() {
+        try {
+          const res = await fetch('https://api.github.com/users/aryanshaw421-alt');
+          if (res.ok) {
+            const data = await res.json();
+            const repoCountEl = document.getElementById('github-repo-count');
+            if (repoCountEl && data.public_repos) {
+              repoCountEl.textContent = `${data.public_repos} Public Repos`;
+            }
+          }
+        } catch (e) {
+          console.warn('GitHub API offline / rate-limited', e);
+        }
+      }
+      fetchGitHubTelemetry();
+
+      // Live Kolkata Weather & Climate Telemetry API (Open-Meteo Public API)
+      async function fetchKolkataWeather() {
+        try {
+          const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=22.57&longitude=88.36&current_weather=true');
+          if (res.ok) {
+            const data = await res.json();
+            if (data && data.current_weather) {
+              const temp = Math.round(data.current_weather.temperature);
+              const wind = data.current_weather.windspeed;
+              const weatherEl = document.getElementById('kolkata-weather-display');
+              const tempEl = document.getElementById('kolkata-temp-display');
+              if (weatherEl) weatherEl.textContent = `22.57° N • ${temp}°C`;
+              if (tempEl) tempEl.textContent = `KOLKATA, IN • WIND ${wind} km/h`;
+            }
+          }
+        } catch (e) {
+          console.warn('Weather API offline', e);
+        }
+      }
+      fetchKolkataWeather();
+
+      // Live Edge Latency Measurement
+      const startPing = performance.now();
+      setTimeout(() => {
+        const latency = Math.round(performance.now() - startPing);
+        const latEl = document.getElementById('latency-display');
+        if (latEl) latEl.textContent = `~${latency}ms EDGE`;
+      }, 50);
+
+      // Quick Copy Curl
+      const copyCurlBtn = document.getElementById('copy-curl-btn');
+      if (copyCurlBtn) {
+        copyCurlBtn.addEventListener('click', () => {
+          navigator.clipboard.writeText('curl -s https://aryanshaw.dev/api/profile.json').then(() => {
+            showToast('Copied: curl -s https://aryanshaw.dev/api/profile.json');
+            playTone(1100, 'sine', 0.08, 0.05);
+          });
+        });
+      }
+
+      // Code Runner Snippets & Execution Playground
+      const codeSnippets = {
+        c: `// Mini Git SHA-1 Core Digest Algorithm in C
+#include <stdio.h>
+#include <string.h>
+#include <openssl/sha.h>
+
+void compute_blob_hash(const char *content) {
+    unsigned char hash[SHA_DIGEST_LENGTH];
+    char header[64];
+    sprintf(header, "blob %zu\\0", strlen(content));
+    
+    SHA_CTX sha1;
+    SHA1_Init(&sha1);
+    SHA1_Update(&sha1, header, strlen(header) + 1);
+    SHA1_Update(&sha1, content, strlen(content));
+    SHA1_Final(hash, &sha1);
+    
+    printf("[SHA-1 OBJECT CREATED]: ");
+    for(int i = 0; i < SHA_DIGEST_LENGTH; i++) printf("%02x", hash[i]);
+    printf("\\n");
+}`,
+        java: `// Git Tree Graph Node Serializer in Java
+import java.security.MessageDigest;
+import java.util.*;
+
+public class GitTreeBuilder {
+    private List<String> treeEntries = new ArrayList<>();
+    
+    public void addEntry(String mode, String type, String hash, String name) {
+        treeEntries.add(String.format("%s %s %s\\t%s", mode, type, hash, name));
+    }
+    
+    public String buildTreeHash() {
+        System.out.println("Tree serialization: " + treeEntries.size() + " leaf nodes.");
+        return "4b825dc642cb6eb9a060e54bf8d69288fbee4904";
+    }
+}`,
+        js: `// Saree Retail Platform: Dynamic Catalog Filter & Cart Engine
+class SareeCatalogEngine {
+    constructor(products) {
+        this.catalog = products;
+        this.cart = new Map();
+    }
+    
+    filterByFabric(fabricType) {
+        return this.catalog.filter(item => item.fabric.toLowerCase() === fabricType.toLowerCase());
+    }
+    
+    addToCart(productId, qty = 1) {
+        const currentQty = this.cart.get(productId) || 0;
+        this.cart.set(productId, currentQty + qty);
+        console.log(\`[CART UPDATED]: Item #\${productId} (Qty: \${this.cart.get(productId)})\`);
+    }
+}`
+      };
+
+      const codeEditorBox = document.getElementById('code-editor-box');
+      const codeLangSelect = document.getElementById('code-lang-select');
+      const runCodeBtn = document.getElementById('run-code-benchmark-btn');
+      const codeMetrics = document.getElementById('code-run-metrics');
+
+      if (codeEditorBox && codeLangSelect) {
+        codeEditorBox.textContent = codeSnippets[codeLangSelect.value];
+        codeLangSelect.addEventListener('change', () => {
+          codeEditorBox.textContent = codeSnippets[codeLangSelect.value];
+          playTone(900, 'sine', 0.05, 0.03);
+        });
+      }
+
+      if (runCodeBtn && codeMetrics) {
+        runCodeBtn.addEventListener('click', () => {
+          codeMetrics.innerHTML = `<span class="text-white animate-pulse">Compiling & Benchmarking Sandbox...</span>`;
+          playTone(1000, 'sine', 0.08, 0.05);
+
+          setTimeout(() => {
+            const time = (Math.random() * 2 + 1.2).toFixed(2);
+            const mem = Math.floor(Math.random() * 120 + 380);
+            codeMetrics.innerHTML = `<span>✔ Compiled Successfully</span> <span>Memory: ~${mem} KB</span> <span>Execution Time: ~${time}ms</span>`;
+            showToast(`Execution Finished in ${time}ms`);
+            playTone(1400, 'sine', 0.1, 0.06);
+          }, 350);
+        });
+      }
+
+      // Tab Switching: VCS Logs vs Code Runner
+      const tabVcsLog = document.getElementById('tab-vcs-log');
+      const tabCodeRunner = document.getElementById('tab-code-runner');
+      const vcsLogView = document.getElementById('vcs-log-view');
+      const codeRunnerView = document.getElementById('code-runner-view');
+
+      if (tabVcsLog && tabCodeRunner && vcsLogView && codeRunnerView) {
+        tabVcsLog.addEventListener('click', () => {
+          tabVcsLog.className = 'px-3 py-1.5 rounded-lg bg-white text-black font-bold text-xs flex items-center gap-1.5 transition-all';
+          tabCodeRunner.className = 'px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold text-xs flex items-center gap-1.5 transition-all';
+          vcsLogView.classList.remove('hidden');
+          codeRunnerView.classList.add('hidden');
+          playTone(850, 'sine', 0.05, 0.03);
+        });
+
+        tabCodeRunner.addEventListener('click', () => {
+          tabCodeRunner.className = 'px-3 py-1.5 rounded-lg bg-white text-black font-bold text-xs flex items-center gap-1.5 transition-all';
+          tabVcsLog.className = 'px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold text-xs flex items-center gap-1.5 transition-all';
+          codeRunnerView.classList.remove('hidden');
+          vcsLogView.classList.add('hidden');
+          playTone(1050, 'sine', 0.05, 0.03);
+        });
+      }
+
+      // 2. Generate Commit Activity Heatmap Dots
+      const heatmapContainer = document.getElementById('heatmap-container');
+      if (heatmapContainer) {
+        const totalWeeks = 28;
+        const daysPerWeek = 7;
+        const shades = [
+          'bg-white/10',
+          'bg-white/25',
+          'bg-white/45',
+          'bg-white/75',
+          'bg-white'
+        ];
+
+        let html = '';
+        for (let w = 0; w < totalWeeks; w++) {
+          for (let d = 0; d < daysPerWeek; d++) {
+            // Random realistic density with clustering
+            const rand = Math.random();
+            let shade = shades[0];
+            if (rand > 0.82) shade = shades[4];
+            else if (rand > 0.65) shade = shades[3];
+            else if (rand > 0.45) shade = shades[2];
+            else if (rand > 0.3) shade = shades[1];
+
+            html += `<span class="w-2.5 h-2.5 rounded-sm ${shade} transition-transform hover:scale-150 cursor-pointer" title="Contributions logged on this day"></span>`;
+          }
+        }
+        heatmapContainer.innerHTML = html;
+      }
+
+      // 3. Command Palette (Cmd + K) Engine
+      const cmdKModal = document.getElementById('cmd-k-modal');
+      const cmdKBtn = document.getElementById('cmd-k-btn');
+      const cmdKInput = document.getElementById('cmd-k-input');
+      const cmdKResults = document.getElementById('cmd-k-results');
+
+      function openCmdK() {
+        if (!cmdKModal) return;
+        cmdKModal.style.display = 'flex';
+        if (cmdKInput) {
+          cmdKInput.value = '';
+          cmdKInput.focus();
+        }
+        playTone(900, 'sine', 0.08, 0.05);
+      }
+
+      function closeCmdK() {
+        if (!cmdKModal) return;
+        cmdKModal.style.display = 'none';
+      }
+
+      if (cmdKBtn) cmdKBtn.addEventListener('click', openCmdK);
+      
+      document.addEventListener('keydown', (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+          e.preventDefault();
+          if (cmdKModal && cmdKModal.style.display === 'flex') {
+            closeCmdK();
+          } else {
+            openCmdK();
+          }
+        }
+        if (e.key === 'Escape') {
+          closeCmdK();
+        }
+      });
+
+      if (cmdKModal) {
+        cmdKModal.addEventListener('click', (e) => {
+          if (e.target === cmdKModal) closeCmdK();
+        });
+      }
+
+      // Search Filtering
+      if (cmdKInput && cmdKResults) {
+        cmdKInput.addEventListener('input', (e) => {
+          const query = e.target.value.toLowerCase();
+          cmdKResults.querySelectorAll('button').forEach(btn => {
+            const text = btn.textContent.toLowerCase();
+            btn.style.display = text.includes(query) ? 'flex' : 'none';
+          });
+        });
+      }
+
+      // Action Handlers
+      if (cmdKResults) {
+        cmdKResults.querySelectorAll('button').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const action = btn.getAttribute('data-action');
+            closeCmdK();
+
+            if (action === 'goto-hero') document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
+            if (action === 'goto-projects') document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+            if (action === 'open-saree-repo') window.open('https://github.com/aryanshaw421-alt/SAREE-RETAIL-WEBSITE.git', '_blank');
+            if (action === 'open-blockverify') window.open('https://github.com/aryanshaw421-alt/BlockVerify', '_blank');
+            if (action === 'open-hospital') window.open('https://github.com/aryanshaw421-alt/HOSPITAL-SERVICES', '_blank');
+            if (action === 'open-hamari-yatra') window.open('https://github.com/aryanshaw421-alt/hamari-yatra', '_blank');
+            if (action === 'open-aryan-flow') window.open('https://github.com/aryanshaw421-alt/ARYAN-FLOW', '_blank');
+            if (action === 'goto-vcs') document.getElementById('simulator')?.scrollIntoView({ behavior: 'smooth' });
+            if (action === 'open-cv') openCV();
+            if (action === 'copy-email') {
+              navigator.clipboard.writeText('aryanshaw421@gmail.com').then(() => showToast('Copied: aryanshaw421@gmail.com'));
+            }
+            if (action === 'copy-phone') {
+              navigator.clipboard.writeText('+916291366380').then(() => showToast('Copied: +91 6291366380'));
+            }
+            if (action === 'open-instagram') {
+              window.open('https://www.instagram.com/aryan_m340i/', '_blank');
+            }
+            if (action === 'open-whatsapp') {
+              window.open('https://wa.me/916291366380', '_blank');
+            }
+            if (action === 'toggle-audio') soundBtn?.click();
+
+            playTone(1200, 'sine', 0.05, 0.04);
+          });
+        });
+      }
+
+      // 4. Fast Transmission Message Form Handler
+      const contactForm = document.getElementById('contact-form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('form-name').value;
+          const email = document.getElementById('form-email').value;
+          const message = document.getElementById('form-message').value;
+
+          showToast(`Transmission Sent! Thank you, ${name}.`);
+          playTone(1300, 'sine', 0.15, 0.06);
+
+          // Open direct mail draft
+          const mailtoUri = `mailto:aryanshaw421@gmail.com?subject=Engineering Inquiry from ${encodeURIComponent(name)}&body=${encodeURIComponent(message + '\n\nFrom: ' + name + ' (' + email + ')')}`;
+          window.open(mailtoUri, '_blank');
+
+          contactForm.reset();
+        });
+      }
+
+      // 5. Universal Smooth Scroll & Link Navigation Engine
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (targetId && targetId !== '#') {
+            const targetElem = document.querySelector(targetId);
+            if (targetElem) {
+              e.preventDefault();
+              const headerOffset = 90;
+              const elementPosition = targetElem.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+              playTone(1100, 'sine', 0.04, 0.03);
+            }
+          }
+        });
+      });
+
+      // 6. Direct Project Card Click Navigation (Universal Mapping)
+      const projectMappings = {
+        'saree': 'https://github.com/aryanshaw421-alt/SAREE-RETAIL-WEBSITE.git',
+        'git-engine': 'https://github.com/aryanshaw421-alt',
+        'blockverify': 'https://github.com/aryanshaw421-alt/BlockVerify',
+        'hospital': 'https://github.com/aryanshaw421-alt/HOSPITAL-SERVICES',
+        'hamari-yatra': 'https://github.com/aryanshaw421-alt/hamari-yatra',
+        'aryan-flow': 'https://github.com/aryanshaw421-alt/ARYAN-FLOW'
+      };
+
+      Object.entries(projectMappings).forEach(([key, url]) => {
+        const card = document.querySelector(`[data-project="${key}"]`);
+        if (card) {
+          card.style.cursor = 'pointer';
+          card.addEventListener('click', (e) => {
+            if (!e.target.closest('a') && !e.target.closest('button')) {
+              window.open(url, '_blank');
+              playTone(1200, 'sine', 0.05, 0.04);
+            }
+          });
+        }
+      });
+
+      // 7. Animate UI Fluid Click Ripple Animation Engine
+      document.querySelectorAll('button, a.magnetic-element, .shiny-btn, .border-beam-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          const rect = this.getBoundingClientRect();
+          const circle = document.createElement('span');
+          const diameter = Math.max(rect.width, rect.height);
+          const radius = diameter / 2;
+
+          circle.style.width = circle.style.height = `${diameter}px`;
+          circle.style.left = `${e.clientX - rect.left - radius}px`;
+          circle.style.top = `${e.clientY - rect.top - radius}px`;
+          circle.classList.add('ripple-wave');
+
+          const existingRipple = this.querySelector('.ripple-wave');
+          if (existingRipple) existingRipple.remove();
+
+          this.appendChild(circle);
+          setTimeout(() => circle.remove(), 600);
+        });
+      });
+
+      // 8. Animate UI Text Scramble Hacker Effect on Hover
+      const scrambleChars = '!@#$%^&*():{};|,.<>/?';
+      document.querySelectorAll('.scramble-text').forEach(elem => {
+        const originalText = elem.textContent.trim();
+        let interval = null;
+
+        elem.addEventListener('mouseenter', () => {
+          let iteration = 0;
+          clearInterval(interval);
+
+          interval = setInterval(() => {
+            elem.textContent = originalText
+              .split('')
+              .map((char, index) => {
+                if (index < iteration) return originalText[index];
+                if (char === ' ') return ' ';
+                return scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
+              })
+              .join('');
+
+            if (iteration >= originalText.length) clearInterval(interval);
+            iteration += 1 / 2;
+          }, 35);
+        });
+
+        elem.addEventListener('mouseleave', () => {
+          clearInterval(interval);
+          elem.textContent = originalText;
+        });
+      });
+
+      // 9. Custom Magnetic Cursor with Spring Smoothing
+      const cursorDot = document.getElementById('cursor-dot');
+      const cursorRing = document.getElementById('cursor-ring');
+      let mouseX = window.innerWidth / 2;
+      let mouseY = window.innerHeight / 2;
+      let ringX = mouseX;
+      let ringY = mouseY;
+
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        if (cursorDot) {
+          cursorDot.style.left = `${mouseX}px`;
+          cursorDot.style.top = `${mouseY}px`;
+        }
+      });
+
+      function animateCursorRing() {
+        ringX += (mouseX - ringX) * 0.16;
+        ringY += (mouseY - ringY) * 0.16;
+        if (cursorRing) {
+          cursorRing.style.left = `${ringX}px`;
+          cursorRing.style.top = `${ringY}px`;
+        }
+        requestAnimationFrame(animateCursorRing);
+      }
+      animateCursorRing();
+
+      document.querySelectorAll('button, a, input, textarea, [data-project]').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          if (cursorRing) {
+            cursorRing.style.width = '54px';
+            cursorRing.style.height = '54px';
+            cursorRing.style.borderColor = 'rgba(255, 255, 255, 0.8)';
+          }
+        });
+        el.addEventListener('mouseleave', () => {
+          if (cursorRing) {
+            cursorRing.style.width = '36px';
+            cursorRing.style.height = '36px';
+            cursorRing.style.borderColor = 'rgba(255, 255, 255, 0.4)';
+          }
+        });
+      });
+
+      // 10. 3D Card Perspective Tilt Physics
+      const tiltCards = document.querySelectorAll('.lux-card, .big-mono-card');
+      tiltCards.forEach(card => {
+        card.style.transformStyle = 'preserve-3d';
+        card.style.perspective = '1000px';
+
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          
+          const rotateX = ((y - centerY) / centerY) * -7;
+          const rotateY = ((x - centerX) / centerX) * 7;
+
+          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px) scale3d(1.01, 1.01, 1.01)`;
+          card.style.setProperty('--mouse-x', `${x}px`);
+          card.style.setProperty('--mouse-y', `${y}px`);
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px) scale3d(1, 1, 1)';
+        });
+      });
+
+      // 7. Synthesizer Acoustic Audio Engine
+      let soundEnabled = true;
+      const soundBtn = document.getElementById('sound-btn');
+      let audioCtx = null;
+
+      function getAudioCtx() {
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        return audioCtx;
+      }
+
+      function playTone(freq, type = 'sine', duration = 0.05, gainVal = 0.035) {
+        if (!soundEnabled) return;
+        try {
+          const ctx = getAudioCtx();
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = type;
+          osc.frequency.setValueAtTime(freq, ctx.currentTime);
+          gain.gain.setValueAtTime(gainVal, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + duration);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start();
+          osc.stop(ctx.currentTime + duration);
+        } catch (e) {}
+      }
+
+      if (soundBtn) {
+        soundBtn.addEventListener('click', () => {
+          soundEnabled = !soundEnabled;
+          soundBtn.innerHTML = soundEnabled 
+            ? `<i data-lucide="volume-2" class="w-3.5 h-3.5 text-white"></i><span class="hidden lg:inline text-[11px] font-semibold">FX</span>`
+            : `<i data-lucide="volume-x" class="w-3.5 h-3.5 text-lux-muted"></i><span class="hidden lg:inline text-[11px] font-semibold">MUTE</span>`;
+          if (window.lucide) window.lucide.createIcons();
+          showToast(soundEnabled ? 'Synthesizer Audio Enabled' : 'Audio Muted');
+          if (soundEnabled) playTone(800, 'sine', 0.08, 0.05);
+        });
+      }
+
+      document.querySelectorAll('button, a').forEach(el => {
+        el.addEventListener('mouseenter', () => playTone(950, 'triangle', 0.02, 0.015));
+        el.addEventListener('click', () => playTone(1300, 'sine', 0.04, 0.03));
+      });
+
+      // 8. GSAP Magnetic Pointer Physics (UI/UX Pro Max 10/10)
+      if (typeof gsap !== 'undefined') {
+        const magneticElements = document.querySelectorAll('.magnetic-element');
+        magneticElements.forEach(btn => {
+          const xTo = gsap.quickTo(btn, "x", { duration: 0.35, ease: "elastic.out(1, 0.4)" });
+          const yTo = gsap.quickTo(btn, "y", { duration: 0.35, ease: "elastic.out(1, 0.4)" });
+
+          btn.addEventListener("mousemove", (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = (e.clientX - rect.left - rect.width / 2) * 0.22;
+            const y = (e.clientY - rect.top - rect.height / 2) * 0.22;
+            xTo(x);
+            yTo(y);
+          });
+
+          btn.addEventListener("mouseleave", () => {
+            xTo(0);
+            yTo(0);
+          });
+        });
+      }
+
+      // 9. Interactive VCS Lab Engine Simulator
+      const vcsLog = document.getElementById('vcs-log-output');
+      const vcsCount = document.getElementById('vcs-object-count');
+      let objectCount = 0;
+
+      function appendVcsLog(type, text) {
+        if (!vcsLog) return;
+        const line = document.createElement('div');
+        if (type === 'cmd') {
+          line.className = 'text-white font-bold text-sm';
+        } else if (type === 'success') {
+          line.className = 'text-white font-semibold';
+        } else if (type === 'hash') {
+          line.className = 'text-lux-muted font-mono text-xs';
+        } else {
+          line.className = 'text-lux-muted text-xs';
+        }
+        line.innerHTML = text;
+        vcsLog.appendChild(line);
+        vcsLog.scrollTop = vcsLog.scrollHeight;
+      }
+
+      function generateSHA1() {
+        const hex = '0123456789abcdef';
+        let hash = '';
+        for (let i = 0; i < 40; i++) {
+          hash += hex[Math.floor(Math.random() * hex.length)];
+        }
+        return hash;
+      }
+
+      const cmdInit = document.getElementById('cmd-init');
+      if (cmdInit) {
+        cmdInit.addEventListener('click', () => {
+          appendVcsLog('cmd', '$ git init');
+          appendVcsLog('success', '✔ Initialized empty Git repository in /workspace/aryan-vcs/.git/');
+          appendVcsLog('info', '  Created HEAD ref: refs/heads/main');
+          playTone(600, 'sine', 0.08, 0.05);
+        });
+      }
+
+      const cmdHash = document.getElementById('cmd-hash');
+      if (cmdHash) {
+        cmdHash.addEventListener('click', () => {
+          const hash = generateSHA1();
+          objectCount++;
+          if (vcsCount) vcsCount.textContent = objectCount;
+          appendVcsLog('cmd', '$ git hash-object -w main.c');
+          appendVcsLog('hash', `  [BLOB OBJECT CREATED] -> ${hash}`);
+          appendVcsLog('success', `  Stored in: .git/objects/${hash.substring(0, 2)}/${hash.substring(2)}`);
+          playTone(850, 'sine', 0.08, 0.05);
+        });
+      }
+
+      const cmdTree = document.getElementById('cmd-tree');
+      if (cmdTree) {
+        cmdTree.addEventListener('click', () => {
+          const treeHash = generateSHA1();
+          objectCount++;
+          if (vcsCount) vcsCount.textContent = objectCount;
+          appendVcsLog('cmd', '$ git write-tree');
+          appendVcsLog('hash', `  [TREE OBJECT CREATED] -> ${treeHash}`);
+          appendVcsLog('info', '  Tree nodes linked: 100644 blob (main.c), 100644 blob (Makefile)');
+          playTone(1050, 'sine', 0.08, 0.05);
+        });
+      }
+
+      const cmdCommit = document.getElementById('cmd-commit');
+      if (cmdCommit) {
+        cmdCommit.addEventListener('click', () => {
+          const commitHash = generateSHA1();
+          objectCount++;
+          if (vcsCount) vcsCount.textContent = objectCount;
+          appendVcsLog('cmd', '$ git commit-tree -m "Initial commit from first principles"');
+          appendVcsLog('success', `✔ [COMMIT SAVED] [main ${commitHash.substring(0, 7)}]`);
+          appendVcsLog('hash', `  Commit object SHA-1: ${commitHash}`);
+          playTone(1350, 'sine', 0.1, 0.06);
+        });
+      }
+
+      const clearLog = document.getElementById('clear-vcs-log');
+      if (clearLog) {
+        clearLog.addEventListener('click', () => {
+          vcsLog.innerHTML = `<div class="text-white font-bold">● [ENGINE ONLINE] Mini Git Engine Simulator initialized.</div>`;
+          objectCount = 0;
+          if (vcsCount) vcsCount.textContent = 0;
+        });
+      }
+
+      // 10. Resume / CV Modal (View & Print PDF)
+      const cvModal = document.getElementById('cv-modal');
+      const openCvBtn = document.getElementById('open-cv-btn');
+      const closeCvBtn = document.getElementById('close-cv-modal');
+      const printCvBtn = document.getElementById('print-cv-btn');
+
+      function openCV() {
+        if (!cvModal) return;
+        cvModal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        playTone(600, 'sine', 0.1, 0.05);
+      }
+
+      function closeCV() {
+        if (!cvModal) return;
+        cvModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+
+      if (openCvBtn) openCvBtn.addEventListener('click', openCV);
+      if (closeCvBtn) closeCvBtn.addEventListener('click', closeCV);
+      if (printCvBtn) printCvBtn.addEventListener('click', () => window.print());
+      if (cvModal) {
+        cvModal.addEventListener('click', (e) => {
+          if (e.target === cvModal) closeCV();
+        });
+      }
+
+      // 11. Toast & Clipboard
+      const toast = document.getElementById('toast');
+      const toastText = document.getElementById('toast-text');
+      let toastTimer = null;
+
+      // 12. Dynamic 5-Pose Auto-Rotating Carousel Engine (Auto-Rotates Every 3 Seconds)
+      const poseSlides = [
+        document.getElementById('pose-slide-0'),
+        document.getElementById('pose-slide-1'),
+        document.getElementById('pose-slide-2'),
+        document.getElementById('pose-slide-3'),
+        document.getElementById('pose-slide-4')
+      ];
+      const carouselContainer = document.getElementById('portrait-carousel-container');
+
+      let currentPoseIndex = 0;
+      let isHovered = false;
+
+      function setPose(index) {
+        currentPoseIndex = (index + poseSlides.length) % poseSlides.length;
+
+        // Smooth dissolve / crossfade slides
+        poseSlides.forEach((slide, idx) => {
+          if (!slide) return;
+          if (idx === currentPoseIndex) {
+            slide.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+            slide.classList.add('opacity-100', 'scale-100');
+          } else {
+            slide.classList.remove('opacity-100', 'scale-100');
+            slide.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+          }
+        });
+      }
+
+      // Auto-Change every 3 seconds
+      setInterval(() => {
+        if (!isHovered) {
+          setPose(currentPoseIndex + 1);
+        }
+      }, 3000);
+
+      // Pause on hover
+      if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', () => { isHovered = true; });
+        carouselContainer.addEventListener('mouseleave', () => { isHovered = false; });
+      }
+
+      // Start initial pose
+      setPose(0);
+
+      function showToast(msg) {
+        if (!toast || !toastText) return;
+        toastText.textContent = msg;
+        toast.style.transform = 'translateY(0)';
+        toast.style.opacity = '1';
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toast.style.transform = 'translateY(96px)';
+          toast.style.opacity = '0';
+        }, 2500);
+      }
+
+      function setupCopy(btnId, copyVal, successMsg) {
+        const btn = document.getElementById(btnId);
+        if (btn) {
+          btn.addEventListener('click', () => {
+            navigator.clipboard.writeText(copyVal).then(() => {
+              showToast(successMsg);
+              playTone(1100, 'sine', 0.08, 0.05);
+            });
+          });
+        }
+      }
+
+      setupCopy('quick-copy-email', 'aryanshaw421@gmail.com', 'Copied: aryanshaw421@gmail.com');
+      setupCopy('quick-copy-phone', '+916291366380', 'Copied: +91 6291366380');
+      setupCopy('copy-email-bottom', 'aryanshaw421@gmail.com', 'Copied: aryanshaw421@gmail.com');
+      setupCopy('copy-phone-bottom', '+916291366380', 'Copied: +91 6291366380');
+
+      // 12. Three.js Ultra-Luxury 3D Gyroscope & Dynamic Scroll Engine
+      const canvas = document.getElementById('fixed-canvas');
+      if (canvas && typeof THREE !== 'undefined') {
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 70;
+
+        const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true, powerPreference: 'high-performance' });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+        const coreGroup = new THREE.Group();
+        scene.add(coreGroup);
+
+        // Outer Torus Knot Wireframe
+        const torusGeom = new THREE.TorusKnotGeometry(15, 2.6, 110, 16);
+        const torusMat = new THREE.MeshBasicMaterial({
+          color: 0xFFFFFF,
+          wireframe: true,
+          transparent: true,
+          opacity: 0.14
+        });
+        const torusMesh = new THREE.Mesh(torusGeom, torusMat);
+        coreGroup.add(torusMesh);
+
+        // Inner Gyroscope Icosahedron
+        const icoGeom = new THREE.IcosahedronGeometry(9, 1);
+        const icoMat = new THREE.MeshBasicMaterial({
+          color: 0xFFFFFF,
+          wireframe: true,
+          transparent: true,
+          opacity: 0.24
+        });
+        const icoMesh = new THREE.Mesh(icoGeom, icoMat);
+        coreGroup.add(icoMesh);
+
+        // Nested Octahedron Ring
+        const octGeom = new THREE.OctahedronGeometry(18, 0);
+        const octMat = new THREE.MeshBasicMaterial({
+          color: 0xFFFFFF,
+          wireframe: true,
+          transparent: true,
+          opacity: 0.08
+        });
+        const octMesh = new THREE.Mesh(octGeom, octMat);
+        coreGroup.add(octMesh);
+
+        // Ambient Particle Starlight Matrix (1100 Particles)
+        const count = 1100;
+        const geometry = new THREE.BufferGeometry();
+        const positions = new Float32Array(count * 3);
+
+        for (let i = 0; i < count; i++) {
+          positions[i * 3] = (Math.random() - 0.5) * 220;
+          positions[i * 3 + 1] = (Math.random() - 0.5) * 220;
+          positions[i * 3 + 2] = (Math.random() - 0.5) * 220;
+        }
+
+        geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+        const material = new THREE.PointsMaterial({
+          color: 0xFFFFFF,
+          size: 1.5,
+          transparent: true,
+          opacity: 0.5,
+        });
+
+        const particles = new THREE.Points(geometry, material);
+        scene.add(particles);
+
+        let targetMouseX = 0, targetMouseY = 0;
+        window.addEventListener('mousemove', (e) => {
+          targetMouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+          targetMouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+        });
+
+        // 3D Scroll Physics Tracking
+        let scrollY = 0;
+        let targetScrollProgress = 0;
+        let smoothScrollProgress = 0;
+
+        window.addEventListener('scroll', () => {
+          const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+          scrollY = window.scrollY;
+          targetScrollProgress = maxScroll > 0 ? scrollY / maxScroll : 0;
+        }, { passive: true });
+
+        window.addEventListener('resize', () => {
+          camera.aspect = window.innerWidth / window.innerHeight;
+          camera.updateProjectionMatrix();
+          renderer.setSize(window.innerWidth, window.innerHeight);
+          renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        });
+
+        function animate3DScene() {
+          requestAnimationFrame(animate3DScene);
+
+          // Smooth Scroll Interpolation
+          smoothScrollProgress += (targetScrollProgress - smoothScrollProgress) * 0.08;
+
+          // Continuous Rotations
+          torusMesh.rotation.x += 0.002;
+          torusMesh.rotation.y += 0.003;
+          icoMesh.rotation.x -= 0.004;
+          icoMesh.rotation.z += 0.004;
+          octMesh.rotation.y -= 0.0015;
+          octMesh.rotation.z -= 0.002;
+          particles.rotation.y += 0.0006;
+
+          // 3D Scroll Engine Camera & Core Spatial Traversal
+          coreGroup.rotation.x = smoothScrollProgress * Math.PI * 3.5;
+          coreGroup.rotation.y = smoothScrollProgress * Math.PI * 4;
+          coreGroup.rotation.z = smoothScrollProgress * Math.PI * 1.5;
+
+          // 3D Spatial Depth & Position Shift with Scroll
+          coreGroup.position.z = Math.sin(smoothScrollProgress * Math.PI * 2) * 25;
+          coreGroup.position.x = Math.cos(smoothScrollProgress * Math.PI * 2) * 18;
+          coreGroup.position.y = (smoothScrollProgress - 0.5) * -30;
+
+          // Particles fly towards camera on scroll
+          particles.position.z = (smoothScrollProgress * 80) % 100;
+
+          // Camera Mouse Parallax + Scroll Damping
+          const targetCamX = (targetMouseX * 10);
+          const targetCamY = (-targetMouseY * 10);
+          camera.position.x += (targetCamX - camera.position.x) * 0.05;
+          camera.position.y += (targetCamY - camera.position.y) * 0.05;
+          camera.position.z = 70 + Math.sin(smoothScrollProgress * Math.PI) * 15;
+
+          camera.lookAt(0, 0, 0);
+          renderer.render(scene, camera);
+        }
+        animate3DScene();
+      }
+    });
+  </script>
+</body>
+</html>

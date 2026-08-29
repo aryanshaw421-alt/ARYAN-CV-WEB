@@ -1,0 +1,6 @@
+# Dependencies & sub-repos
+500-AI-Agents-Projects/
+awesome-llm-apps/
+.agents/
+.DS_Store
+*.log
