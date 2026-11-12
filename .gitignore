@@ -4,3 +4,5 @@ awesome-llm-apps/
 .agents/
 .DS_Store
 *.log
+.vercel
+.env*
