@@ -4,3 +4,4 @@ awesome-llm-apps/
 .agents/
 .DS_Store
 *.log
+.backup_photos/
