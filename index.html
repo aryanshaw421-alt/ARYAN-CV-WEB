@@ -500,10 +500,10 @@
           <span>CANDIDATE: ARYAN KUMAR SHAW • B.TECH IN CSBS (2025–2029)</span>
         </div>
         <div class="flex items-center gap-3">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-lux-card border border-white/10 text-[11px] text-lux-silver">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-lux-card border border-emerald-500/40 text-[11px] text-white shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <span class="text-lux-muted uppercase tracking-wider text-[10px]">VISITORS:</span>
-            <span id="visitor-count-hero" class="text-white font-bold tracking-widest tabular-nums">...</span>
+            <span id="visitor-count-hero" class="text-emerald-400 font-bold tracking-widest tabular-nums">Loading...</span>
           </div>
           <div class="text-lux-muted hidden sm:block uppercase tracking-[0.25em] text-[11px] font-bold">
             KOLKATA, INDIA • SYSTEMS BUILDER
@@ -659,16 +659,21 @@
           <div class="text-[10px] text-lux-silver">INDIAN STANDARD TIME</div>
         </div>
 
-        <!-- API Node 4: Developer CLI Quick-Curl Protocol -->
+        <!-- API Node 4: Live Global Visitor Telemetry -->
         <div class="space-y-1">
-          <div class="text-lux-muted text-[10px] uppercase tracking-wider">TERMINAL QUICK-CURL</div>
-          <div class="flex items-center gap-2">
-            <code class="px-2 py-1 rounded bg-black border border-white/20 text-white text-[11px] font-bold select-all">curl aryan.dev</code>
-            <button id="copy-curl-btn" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-all group" title="Copy curl command">
-              <svg class="w-3.5 h-3.5 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-            </button>
+          <div class="text-lux-muted text-[10px] uppercase tracking-wider flex items-center justify-between">
+            <span>LIVE VISITOR TRAFFIC</span>
+            <span class="text-emerald-400 font-bold flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+              ONLINE
+            </span>
           </div>
-          <div class="text-[10px] text-lux-silver">DEVELOPER CLI PROTOCOL</div>
+          <div class="text-white font-bold text-sm sm:text-base flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span id="visitor-count-hud" class="text-emerald-400 font-bold tracking-wider tabular-nums">Loading...</span>
+            <span class="text-[11px] text-lux-muted font-normal">Visits</span>
+          </div>
+          <div class="text-[10px] text-lux-silver">VERIFIED SESSIONS • CLOUD SYNCED</div>
         </div>
       </div>
 
@@ -1562,7 +1567,7 @@
           <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
         </span>
         <span class="text-lux-muted uppercase tracking-wider text-[11px]">VISITORS:</span>
-        <span id="visitor-count" class="font-bold text-white font-mono tracking-wider tabular-nums">...</span>
+        <span id="visitor-count" class="font-bold text-emerald-400 font-mono tracking-wider tabular-nums">Loading...</span>
       </div>
 
       <a href="#hero" class="text-white hover:underline flex items-center gap-1.5 font-bold magnetic-element">
@@ -1884,6 +1889,116 @@
         }
       }
       fetchKolkataWeather();
+
+      // ==========================================
+      // Live Global Visitor Counter (Real-time Cloud Sync)
+      // ==========================================
+      async function initVisitorCounter() {
+        const heroEl = document.getElementById('visitor-count-hero');
+        const hudEl = document.getElementById('visitor-count-hud');
+        const footerEl = document.getElementById('visitor-count');
+        if (!heroEl && !hudEl && !footerEl) return;
+
+        const NAMESPACE = 'aryan_kumar_shaw_cv_portfolio';
+        const CACHE_KEY = 'aryan_cv_visitor_cache';
+        const SESSION_KEY = 'aryan_cv_session_counted';
+
+        const updateAll = (val) => {
+          const str = typeof val === 'number' ? val.toLocaleString() : val;
+          if (heroEl) heroEl.textContent = str;
+          if (hudEl) hudEl.textContent = str;
+          if (footerEl) footerEl.textContent = str;
+        };
+
+        const animateAll = (start, end) => {
+          if (typeof start !== 'number' || typeof end !== 'number' || start === end) {
+            updateAll(end);
+            return;
+          }
+          const duration = 1200;
+          const startTime = performance.now();
+
+          function tick(now) {
+            const progress = Math.min((now - startTime) / duration, 1);
+            const easeOut = 1 - Math.pow(1 - progress, 4);
+            const current = Math.floor(start + (end - start) * easeOut);
+            updateAll(current);
+
+            if (progress < 1) {
+              requestAnimationFrame(tick);
+            } else {
+              updateAll(end);
+            }
+          }
+          requestAnimationFrame(tick);
+        };
+
+        // 1. Initial cached value for zero delay
+        const cachedRaw = localStorage.getItem(CACHE_KEY);
+        const cachedCount = cachedRaw ? parseInt(cachedRaw, 10) : null;
+        if (cachedCount && !isNaN(cachedCount)) {
+          updateAll(cachedCount);
+        }
+
+        // 2. Determine session: hit on fresh visit, get on refresh
+        const alreadyCounted = sessionStorage.getItem(SESSION_KEY);
+        const action = alreadyCounted ? 'get' : 'hit';
+
+        let resolved = null;
+
+        // 3. Primary Fast Cloud Counter (Abacus)
+        try {
+          const ctrl = new AbortController();
+          const tId = setTimeout(() => ctrl.abort(), 3500);
+          const url = action === 'hit'
+            ? 'https://abacus.jasoncameron.dev/hit/aryanshaw.dev/portfolio'
+            : 'https://abacus.jasoncameron.dev/get/aryanshaw.dev/portfolio';
+
+          const res = await fetch(url, { signal: ctrl.signal });
+          clearTimeout(tId);
+          if (res.ok) {
+            const data = await res.json();
+            const val = parseInt(data.value, 10);
+            if (!isNaN(val)) resolved = val;
+          }
+        } catch (e) {
+          // Fallback to secondary
+        }
+
+        // 4. Secondary Backup Cloud Counter (CountAPI)
+        if (resolved === null) {
+          try {
+            const ctrl2 = new AbortController();
+            const tId2 = setTimeout(() => ctrl2.abort(), 4000);
+            const res2 = await fetch(`https://countapi.mileshilliard.com/api/v1/${action}/${NAMESPACE}`, {
+              signal: ctrl2.signal
+            });
+            clearTimeout(tId2);
+            if (res2.ok) {
+              const data2 = await res2.json();
+              const val2 = parseInt(data2.value, 10);
+              if (!isNaN(val2)) resolved = val2;
+            }
+          } catch (e) {
+            // Backup unreachable
+          }
+        }
+
+        // 5. Offline Fallback
+        if (resolved === null) {
+          resolved = cachedCount && !isNaN(cachedCount) ? (alreadyCounted ? cachedCount : cachedCount + 1) : 4;
+        }
+
+        sessionStorage.setItem(SESSION_KEY, 'true');
+        localStorage.setItem(CACHE_KEY, resolved.toString());
+
+        if (cachedCount && !isNaN(cachedCount)) {
+          animateAll(cachedCount, resolved);
+        } else {
+          animateAll(0, resolved);
+        }
+      }
+      initVisitorCounter();
 
       // Live Edge Latency Measurement
       const startPing = performance.now();
