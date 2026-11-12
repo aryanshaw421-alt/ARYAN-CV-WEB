@@ -469,16 +469,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let resolvedCount = null;
 
-    // 3. Try Primary High-Speed API (Abacus - <500ms edge latency)
+    // 3. Try Primary API (CountAPI)
     try {
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 3500);
+      const timeoutId = setTimeout(() => controller.abort(), 4000);
 
-      const abacusUrl = action === 'hit'
-        ? `https://abacus.jasoncameron.dev/hit/aryanshaw.dev/portfolio`
-        : `https://abacus.jasoncameron.dev/get/aryanshaw.dev/portfolio`;
-
-      const res = await fetch(abacusUrl, { signal: controller.signal });
+      const res = await fetch(`https://countapi.mileshilliard.com/api/v1/${action}/${NAMESPACE}`, {
+        signal: controller.signal
+      });
       clearTimeout(timeoutId);
 
       if (res.ok) {
@@ -490,15 +488,17 @@ document.addEventListener('DOMContentLoaded', () => {
       // Primary API timed out or unreachable
     }
 
-    // 4. Try Secondary Backup API (CountAPI) if primary didn't resolve
+    // 4. Try Secondary Backup API (Abacus) if primary didn't resolve
     if (resolvedCount === null) {
       try {
         const controller2 = new AbortController();
         const timeoutId2 = setTimeout(() => controller2.abort(), 4000);
 
-        const res2 = await fetch(`https://countapi.mileshilliard.com/api/v1/${action}/${NAMESPACE}`, {
-          signal: controller2.signal
-        });
+        const abacusUrl = action === 'hit'
+          ? `https://abacus.jasoncameron.dev/hit/aryanshaw.dev/portfolio`
+          : `https://abacus.jasoncameron.dev/get/aryanshaw.dev/portfolio`;
+
+        const res2 = await fetch(abacusUrl, { signal: controller2.signal });
         clearTimeout(timeoutId2);
 
         if (res2.ok) {
