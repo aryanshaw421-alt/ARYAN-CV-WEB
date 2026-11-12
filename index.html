@@ -499,8 +499,15 @@
           <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
           <span>CANDIDATE: ARYAN KUMAR SHAW • B.TECH IN CSBS (2025–2029)</span>
         </div>
-        <div class="text-lux-muted hidden sm:block uppercase tracking-[0.25em] text-[11px] font-bold">
-          KOLKATA, INDIA • SYSTEMS BUILDER
+        <div class="flex items-center gap-3">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-lux-card border border-white/10 text-[11px] text-lux-silver">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span class="text-lux-muted uppercase tracking-wider text-[10px]">VISITORS:</span>
+            <span id="visitor-count-hero" class="text-white font-bold tracking-widest tabular-nums">...</span>
+          </div>
+          <div class="text-lux-muted hidden sm:block uppercase tracking-[0.25em] text-[11px] font-bold">
+            KOLKATA, INDIA • SYSTEMS BUILDER
+          </div>
         </div>
       </div>
 
@@ -1534,7 +1541,7 @@
 
   <!-- MINIMALIST FOOTER -->
   <footer class="border-t border-white/10 py-10 font-mono text-sm text-lux-muted relative z-10">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="flex items-center gap-3">
         <div class="w-8 h-8 rounded-lg bg-white text-black flex items-center justify-center shadow-md">
           <svg class="w-5 h-5 text-black" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1547,6 +1554,17 @@
           © 2026 <span class="text-white font-bold">Aryan Kumar Shaw</span> — Built with First-Principles Precision.
         </div>
       </div>
+
+      <!-- Live Cyberpunk Visitor Counter Badge -->
+      <div class="flex items-center gap-2.5 px-4 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-xs font-mono text-lux-silver shadow-inner hover:border-white/20 transition-all">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        <span class="text-lux-muted uppercase tracking-wider text-[11px]">VISITORS:</span>
+        <span id="visitor-count" class="font-bold text-white font-mono tracking-wider tabular-nums">...</span>
+      </div>
+
       <a href="#hero" class="text-white hover:underline flex items-center gap-1.5 font-bold magnetic-element">
         [BACK TO TOP ↑]
       </a>

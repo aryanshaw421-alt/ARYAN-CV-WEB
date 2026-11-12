@@ -410,4 +410,126 @@ document.addEventListener('DOMContentLoaded', () => {
     animatedCounters = true;
   }
   animateCounters();
+
+  // ==========================================
+  // 10. Live Visitor Counter (Resilient & Non-Spam)
+  // ==========================================
+  async function initVisitorCounter() {
+    const heroCountEl = document.getElementById('visitor-count-hero');
+    const footerCountEl = document.getElementById('visitor-count');
+    if (!heroCountEl && !footerCountEl) return;
+
+    const NAMESPACE = 'aryan_kumar_shaw_cv_portfolio';
+    const CACHE_KEY = 'aryan_cv_visitor_cache';
+    const SESSION_KEY = 'aryan_cv_session_counted';
+
+    const renderCount = (val) => {
+      const formatted = typeof val === 'number' ? val.toLocaleString() : val;
+      if (heroCountEl) heroCountEl.textContent = formatted;
+      if (footerCountEl) footerCountEl.textContent = formatted;
+    };
+
+    const animateCount = (startVal, endVal) => {
+      if (typeof startVal !== 'number' || typeof endVal !== 'number' || startVal === endVal) {
+        renderCount(endVal);
+        return;
+      }
+      const duration = 1200; // ms
+      const startTime = performance.now();
+
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // Quartic ease-out curve
+        const easeOut = 1 - Math.pow(1 - progress, 4);
+        const current = Math.floor(startVal + (endVal - startVal) * easeOut);
+        renderCount(current);
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          renderCount(endVal);
+        }
+      }
+      requestAnimationFrame(update);
+    };
+
+    // 1. Initial display from localStorage cache if available
+    const cachedRaw = localStorage.getItem(CACHE_KEY);
+    const cachedCount = cachedRaw ? parseInt(cachedRaw, 10) : null;
+    if (cachedCount && !isNaN(cachedCount)) {
+      renderCount(cachedCount);
+    } else {
+      renderCount('...');
+    }
+
+    // 2. Determine session state (avoid duplicate hits on page refreshes)
+    const alreadyCountedInSession = sessionStorage.getItem(SESSION_KEY);
+    const action = alreadyCountedInSession ? 'get' : 'hit';
+
+    let resolvedCount = null;
+
+    // 3. Try Primary High-Speed API (Abacus - <500ms edge latency)
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 3500);
+
+      const abacusUrl = action === 'hit'
+        ? `https://abacus.jasoncameron.dev/hit/aryanshaw.dev/portfolio`
+        : `https://abacus.jasoncameron.dev/get/aryanshaw.dev/portfolio`;
+
+      const res = await fetch(abacusUrl, { signal: controller.signal });
+      clearTimeout(timeoutId);
+
+      if (res.ok) {
+        const data = await res.json();
+        const count = parseInt(data.value, 10);
+        if (!isNaN(count)) resolvedCount = count;
+      }
+    } catch (e) {
+      // Primary API timed out or unreachable
+    }
+
+    // 4. Try Secondary Backup API (CountAPI) if primary didn't resolve
+    if (resolvedCount === null) {
+      try {
+        const controller2 = new AbortController();
+        const timeoutId2 = setTimeout(() => controller2.abort(), 4000);
+
+        const res2 = await fetch(`https://countapi.mileshilliard.com/api/v1/${action}/${NAMESPACE}`, {
+          signal: controller2.signal
+        });
+        clearTimeout(timeoutId2);
+
+        if (res2.ok) {
+          const data2 = await res2.json();
+          const count2 = parseInt(data2.value, 10);
+          if (!isNaN(count2)) resolvedCount = count2;
+        }
+      } catch (e) {
+        // Backup API unreachable
+      }
+    }
+
+    // 5. Offline / Local fallback if both APIs blocked by network/adblocker
+    if (resolvedCount === null) {
+      if (cachedCount && !isNaN(cachedCount)) {
+        resolvedCount = alreadyCountedInSession ? cachedCount : cachedCount + 1;
+      } else {
+        resolvedCount = 1;
+      }
+    }
+
+    // 6. Persist state and trigger sleek smooth animation
+    sessionStorage.setItem(SESSION_KEY, 'true');
+    localStorage.setItem(CACHE_KEY, resolvedCount.toString());
+
+    if (cachedCount && !isNaN(cachedCount)) {
+      animateCount(cachedCount, resolvedCount);
+    } else {
+      animateCount(0, resolvedCount);
+    }
+  }
+
+  initVisitorCounter();
 });
